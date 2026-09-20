@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  h1, h2, h3, .font-heading {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+.glass-panel {
+  background: rgba(12, 28, 48, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(123, 184, 212, 0.18);
+}
+
+.glass-panel-accent {
+  background: linear-gradient(135deg, rgba(36, 93, 152, 0.2), rgba(62, 171, 176, 0.12));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(62, 171, 176, 0.3);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(62, 171, 176, 0.45);
+  box-shadow: 0 16px 32px -8px rgba(7, 24, 39, 0.6), 0 0 20px -4px rgba(62, 171, 176, 0.2);
+}

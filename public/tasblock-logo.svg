@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Diamond Frame Left -->
+  <polygon points="118,230 52,296 248,492 248,458 78,288 134,246" fill="#64B5F6" />
+  <!-- Diamond Frame Right -->
+  <polygon points="378,230 444,296 248,492 248,458 418,288 362,246" fill="#64B5F6" />
+  <!-- Left Tower (Azure Blue) -->
+  <polygon points="168,280 168,460 92,384 92,356" fill="#0B75AF" />
+  <!-- Top Dark Teal Chevron -->
+  <polygon points="282,16 282,190 260,168 260,68 204,124 204,94" fill="#01627A" />
+  <!-- Center Main Teal Column -->
+  <polygon points="248,58 248,332 210,370 210,452 176,486 176,302 148,274 148,158" fill="#28A8A0" />
+  <!-- Right Navy Tower -->
+  <polygon points="336,186 412,262 412,360 312,460 312,210" fill="#1E4E8C" />
+</svg>
