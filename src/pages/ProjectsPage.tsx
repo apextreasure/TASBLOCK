@@ -15,10 +15,18 @@ export default function ProjectsPage({ onNavigate }: { onNavigate: (page: PageTy
         <div className="grid md:grid-cols-2 gap-6">
           {MANUFACTURER_CASES.map((record) => (
             <article key={record.id} className="rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/80 flex flex-col">
-              <figure className="p-4 pb-0"><img src={record.id === 'demo-2016' ? '/images/manufacturer-demo.webp' : '/images/manufacturer-school.webp'} alt={record.id === 'demo-2016' ? 'Rumah demonstrasi pengeluar 2016' : 'Bangunan SJKC Yu Ying dalam rujukan pengeluar'} width={record.id === 'demo-2016' ? 377 : 444} height={record.id === 'demo-2016' ? 411 : 262} loading="lazy" className="w-full h-72 object-contain bg-[#102c46] rounded-xl" /><figcaption className="text-xs text-slate-400 mt-3">{record.id === 'demo-2016' ? 'Foto rumah demonstrasi dalam profil Tasblock (M) Sdn. Bhd.' : 'Foto SJKC Yu Ying, petikan CIDB IBS Coffee Table Book dalam profil Tasblock (M) Sdn. Bhd.'} Rujukan pengeluar, bukan portfolio Builder.</figcaption></figure>
+              <figure className="p-4 pb-4">
+                <div className="aspect-[3/2] overflow-hidden rounded-xl bg-[#102c46]">
+                  <img src={record.image.src} alt={record.image.alt} width={record.image.width} height={record.image.height} loading="lazy" decoding="async" className="w-full h-full object-cover" style={{ objectPosition: record.image.position }} />
+                </div>
+                <figcaption className="text-xs text-slate-400 mt-3 space-y-2">
+                  <p>{record.image.caption}. Sumber: profil Tasblock (M) Sdn. Bhd., halaman fizikal {record.image.page}. Rujukan pengeluar, bukan portfolio Builder.</p>
+                  <a href={record.image.src} target="_blank" rel="noopener noreferrer" className="inline-flex py-2 text-[#99D5D9] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#99D5D9]" aria-label={`Lihat foto penuh: ${record.title} (tab baharu)`}>Lihat foto penuh · {record.image.width} × {record.image.height} px (tab baharu)</a>
+                </figcaption>
+              </figure>
               <div className="p-6 sm:p-8 bg-gradient-to-br from-[#1b3858] to-[#0d2238] border-b border-slate-800">
                 <p className="text-sm text-[#99D5D9] mb-4">Tasblock (M) Sdn. Bhd. · Rekod pengeluar</p>
-                <p className="text-5xl font-bold text-[#3EABB0] font-mono mb-4">{record.year}</p>
+                {record.year ? <p className="text-5xl font-bold text-[#3EABB0] font-mono mb-4">{record.year}</p> : <p className="text-sm text-slate-400 mb-4">Tahun tidak dinyatakan dalam sumber</p>}
                 <h3 className="text-2xl font-bold font-heading text-white">{record.title}</h3>
               </div>
               <div className="p-6 sm:p-8 space-y-5 flex-1">
@@ -33,7 +41,7 @@ export default function ProjectsPage({ onNavigate }: { onNavigate: (page: PageTy
       </section>
       <aside className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex items-start gap-4">
         <Info className="text-[#3EABB0] shrink-0 mt-1" aria-hidden="true" />
-        <div className="space-y-2"><h2 className="text-lg font-bold text-white">Konteks yang jelas untuk setiap projek</h2><p className="text-sm text-slate-300 leading-relaxed">Foto di atas diambil daripada bahagian projek yang berkaitan dalam profil korporat pengeluar. Portfolio khusus Builder akan memerlukan pengesahan peranan, status kerja dan kebenaran penggunaan foto sebelum diterbitkan.</p></div>
+        <div className="space-y-2"><h2 className="text-lg font-bold text-white">Konteks yang jelas untuk setiap projek</h2><p className="text-sm text-slate-300 leading-relaxed">Foto dipaparkan dalam bingkai landskap seragam; pautan foto penuh membuka imej tanpa potongan paparan. Resolusi asal sesetengah foto adalah rendah dan dikekalkan tanpa penjanaan atau penggantian AI. Foto di atas diambil daripada bahagian projek yang berkaitan dalam profil korporat pengeluar. Portfolio khusus Builder akan memerlukan pengesahan peranan, status kerja dan kebenaran penggunaan foto sebelum diterbitkan.</p></div>
       </aside>
       <section className="rounded-3xl border border-[#3EABB0]/30 bg-gradient-to-r from-[#1b3858] to-[#071827] p-8 space-y-4">
         <h2 className="text-2xl font-bold text-white font-heading">Setiap tapak mempunyai keperluan tersendiri</h2>
