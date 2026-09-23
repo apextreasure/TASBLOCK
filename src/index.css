@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+/* Readable content scale on every route. Keep header navigation geometry separate.
+   rem units preserve browser font preferences and zoom. */
+main, footer {
+  --text-xs: 1.125rem;
+  --text-xs--line-height: 1.65;
+  --text-sm: 1.125rem;
+  --text-sm--line-height: 1.65;
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.65;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.6;
+  --color-slate-400: #cbd5e1;
+  --color-slate-500: #b8c9db;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  main, footer {
+    --text-base: 1.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;

@@ -25,7 +25,11 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-10">
           <div className="min-w-0 space-y-5">
             <div className="flex items-center gap-3">
-              <img src="/images/tasblock-symbol.png" alt="Tasblock Builder" width="65" height="80" className="h-20 w-auto object-contain" />
+              <img src="/images/tasblock-symbol.png" alt="" width="65" height="80" className="h-20 w-auto object-contain shrink-0" />
+              <span className="flex flex-col leading-tight text-white">
+                <span className="text-2xl font-bold tracking-tight">tasblock</span>
+                <span className="text-lg font-semibold tracking-[0.2em]">BUILDER</span>
+              </span>
             </div>
             <p className="text-sm leading-relaxed">{COMPANY_CONTACT.tagline}. Reka & bina, latihan pemasangan, pembekalan komponen serta bekal & pasang.</p>
           </div>
