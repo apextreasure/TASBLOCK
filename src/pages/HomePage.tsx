@@ -34,7 +34,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
         <figure className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <img src="/images/hero.webp" alt="Ilustrasi konsep rumah taman dengan suasana tropika" width="1440" height="960" fetchPriority="high" className="w-full aspect-[16/9] object-cover rounded-3xl" />
-          <figcaption className="text-xs text-slate-400 mt-3">Ilustrasi AI · Konsep reka bentuk, bukan foto projek sebenar.</figcaption>
+
         </figure>
       </section>
 
@@ -51,7 +51,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <article key={service.id} className="min-w-0 rounded-2xl border border-slate-700 bg-slate-900/70 p-6 flex flex-col">
                 <figure className="mb-5">
                   <img src={`/images/${service.id}.webp`} alt={`Ilustrasi ${service.title}`} width="1440" height="960" loading="lazy" className="w-full aspect-[3/2] object-cover rounded-xl" />
-                  <figcaption className="text-xs text-slate-400 mt-2">Ilustrasi AI · Gambaran perkhidmatan</figcaption>
+
                 </figure>
                 <Icon aria-hidden="true" className="w-8 h-8 text-[#3EABB0] mb-5" />
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
