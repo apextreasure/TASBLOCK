@@ -32,6 +32,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
           <p className="text-sm text-slate-400">Kesesuaian sistem, skop, kos dan jadual tertakluk kepada semakan projek.</p>
         </div>
+        <figure className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <img src="/images/hero.webp" alt="Ilustrasi konsep rumah taman dengan suasana tropika" width="1440" height="960" fetchPriority="high" className="w-full aspect-[16/9] object-cover rounded-3xl" />
+          <figcaption className="text-xs text-slate-400 mt-3">Ilustrasi AI · Konsep reka bentuk, bukan foto projek sebenar.</figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="home-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,6 +49,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             const Icon = serviceIcons[index] || Building2;
             return (
               <article key={service.id} className="min-w-0 rounded-2xl border border-slate-700 bg-slate-900/70 p-6 flex flex-col">
+                <figure className="mb-5">
+                  <img src={`/images/${service.id}.webp`} alt={`Ilustrasi ${service.title}`} width="1440" height="960" loading="lazy" className="w-full aspect-[3/2] object-cover rounded-xl" />
+                  <figcaption className="text-xs text-slate-400 mt-2">Ilustrasi AI · Gambaran perkhidmatan</figcaption>
+                </figure>
                 <Icon aria-hidden="true" className="w-8 h-8 text-[#3EABB0] mb-5" />
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 leading-relaxed mb-6">{service.shortDesc}</p>
@@ -67,11 +75,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               Kenali Komponen Sistem <ArrowRight aria-hidden="true" className="w-5 h-5" />
             </button>
           </div>
+          <div className="space-y-4"><figure><img src="/images/components.webp" alt="Komponen sistem daripada profil pengeluar Tasblock" width="355" height="325" loading="lazy" className="w-full max-h-72 object-contain bg-white rounded-xl p-4" /><figcaption className="text-xs text-slate-400 mt-2">Sumber: Profil korporat Tasblock (M) Sdn. Bhd. · Rujukan komponen, bukan panduan pemasangan.</figcaption></figure>
           <ul className="grid sm:grid-cols-2 gap-3 content-center">
             {PRODUCTS_DATA.map(component => (
               <li key={component.id} className="p-4 rounded-xl bg-[#071827]/70 border border-slate-700 text-slate-200">{component.name}</li>
             ))}
-          </ul>
+          </ul></div>
         </div>
       </section>
 

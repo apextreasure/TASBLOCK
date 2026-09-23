@@ -77,15 +77,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       <div className="bg-[#102c46] px-4 py-2 text-center text-sm text-slate-200">Teknologi komposit Tasblock untuk kontraktor tempatan & projek individu</div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 min-h-20">
         <button onClick={() => handleNavigate('home')} aria-label="Tasblock Builder — Laman Utama" className={`flex items-center gap-3 text-left shrink-0 py-2 rounded-lg ${focusStyle}`}>
-          <span className="h-12 w-12 p-1.5 rounded-xl bg-white flex items-center justify-center shrink-0">
-            <img src="/tasblock-logo.png" alt="" className="h-full w-full object-contain" onError={(event) => {
-              if (!event.currentTarget.src.endsWith('/tasblock-logo.svg')) event.currentTarget.src = '/tasblock-logo.svg';
-            }} />
-          </span>
-          <span className="flex flex-col">
-            <span className="text-lg text-slate-200 leading-tight">tasblock</span>
-            <span className="text-sm font-extrabold tracking-[0.19em] text-[#4A90E2]">BUILDER</span>
-          </span>
+          <img src="/images/tasblock-symbol.png" alt="" width="58" height="72" className="h-16 w-auto object-contain" />
         </button>
         <nav aria-label="Navigasi utama" className="hidden xl:flex items-center gap-1">{navItems.map(item => navButton(item))}</nav>
         <button ref={toggleRef} onClick={() => setMobileMenuOpen(open => !open)} aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation" aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'} className={`xl:hidden min-h-12 min-w-12 flex items-center justify-center rounded-lg border border-slate-600 text-slate-200 hover:bg-slate-800 ${focusStyle}`}>

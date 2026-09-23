@@ -28,7 +28,9 @@ Manufacturer marketing records are not independent technical verification. Numer
 - Unknown email, address, opening hours and coverage remain empty in shared data. Consumers must hide empty contact fields rather than manufacture replacements.
 - Training is an expression-of-interest flow only. Proposed topics are labelled as proposed; dates, venue, duration, fees, instructors, syllabus and certificates are not confirmed.
 - Training form prepares a visible message. Users explicitly open WhatsApp and send it themselves. It does not claim successful submission or reserve a place.
-- No photographs are paired with the manufacturer case studies. No unsupported Builder job portfolio is published.
+- Manufacturer case images now come directly from the supplied CV: physical p. 14 (2016 demonstration house) and p. 15 (SJKC Yu Ying photo reproduced from CIDB IBS Coffee Table Book). Captions attribute them to manufacturer references, not Builder jobs. Component illustration is cropped from physical p. 8. No unsupported Builder job portfolio is published.
+- Five GPT-image-2-high concept illustrations support the homepage and service categories. They are visibly labelled as AI illustrations, not actual employees, training events, stock or completed projects. Visual direction follows the supplied composite-system profile and original Google Site garden-house/small-project applications; generated images are not technical product drawings.
+- Header/footer display only the symbol cropped from the owner's supplied original PNG, preserving original colors and transparency; no generated replacement logo or visible wordmark.
 - No testimonials are published without verified testimony and consent.
 - Project design, suitability, permits and lending decisions require their own qualified review; use of the system guarantees none of these.
 

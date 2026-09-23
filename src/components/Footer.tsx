@@ -25,15 +25,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-10">
           <div className="min-w-0 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 p-1.5 rounded-xl bg-white flex items-center justify-center shrink-0">
-                <img src="/tasblock-logo.png" alt="Tasblock Builder" className="h-full w-full object-contain" onError={(event) => {
-                  if (!event.currentTarget.src.endsWith('/tasblock-logo.svg')) event.currentTarget.src = '/tasblock-logo.svg';
-                }} />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg text-slate-200 leading-tight">tasblock</span>
-                <span className="text-sm font-extrabold tracking-[0.19em] text-[#4A90E2]">BUILDER</span>
-              </div>
+              <img src="/images/tasblock-symbol.png" alt="Tasblock Builder" width="65" height="80" className="h-20 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed">{COMPANY_CONTACT.tagline}. Reka & bina, latihan pemasangan, pembekalan komponen serta bekal & pasang.</p>
           </div>

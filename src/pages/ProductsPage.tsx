@@ -10,6 +10,7 @@ export default function ProductsPage({ onNavigate }: { onNavigate: (page: PageTy
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-heading">Satu sistem.<br /><span className="text-[#3EABB0]">Pelbagai komponen.</span></h1>
         <p className="text-slate-300 leading-relaxed">Tasblock ialah sistem binaan berasaskan bahan komposit termaju dan bio-komposit. Profil Tasblock (M) Sdn. Bhd. menerangkan rangkaian yang merangkumi dinding, adaptor, rasuk, penyambung dan lantai.</p>
       </header>
+      <figure className="max-w-2xl mx-auto"><img src="/images/components.webp" alt="Ilustrasi komponen asal daripada profil korporat pengeluar" width="355" height="325" className="w-full max-h-96 object-contain bg-white p-6 rounded-2xl" /><figcaption className="text-sm text-slate-400 mt-3">Sumber: Profil korporat Tasblock (M) Sdn. Bhd. · Pengenalan komponen sahaja, bukan lukisan teknikal atau panduan pemasangan.</figcaption></figure>
       <section aria-labelledby="catalogue-title" className="space-y-6">
         <div><p className="text-sm text-[#99D5D9] mb-2">Rujukan: maklumat komponen pengeluar</p><h2 id="catalogue-title" className="text-2xl font-heading font-bold text-white">Kenali keluarga komponen Tasblock</h2></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
