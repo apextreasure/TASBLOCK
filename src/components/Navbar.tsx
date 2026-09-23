@@ -78,6 +78,10 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 min-h-20">
         <button onClick={() => handleNavigate('home')} aria-label="Tasblock Builder — Laman Utama" className={`flex items-center gap-3 text-left shrink-0 py-2 rounded-lg ${focusStyle}`}>
           <img src="/images/tasblock-symbol.png" alt="" width="58" height="72" className="h-16 w-auto object-contain" />
+          <span className="flex flex-col leading-tight text-white">
+            <span className="text-2xl font-bold tracking-tight">tasblock</span>
+            <span className="text-sm font-semibold tracking-[0.2em]">BUILDER</span>
+          </span>
         </button>
         <nav aria-label="Navigasi utama" className="hidden xl:flex items-center gap-1">{navItems.map(item => navButton(item))}</nav>
         <button ref={toggleRef} onClick={() => setMobileMenuOpen(open => !open)} aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation" aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'} className={`xl:hidden min-h-12 min-w-12 flex items-center justify-center rounded-lg border border-slate-600 text-slate-200 hover:bg-slate-800 ${focusStyle}`}>
