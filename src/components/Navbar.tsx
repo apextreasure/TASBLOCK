@@ -83,7 +83,8 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <span className="text-sm font-semibold tracking-[0.2em]">BUILDER</span>
           </span>
         </button>
-        <nav aria-label="Navigasi utama" className="hidden 2xl:flex items-center gap-3">{navItems.map(item => navButton(item))}</nav>
+        <nav aria-label="Navigasi utama" className="hidden 2xl:flex flex-1 justify-center items-center gap-3">{navItems.filter(item => item.page !== 'enquiry' && item.page !== 'contact').map(item => navButton(item))}</nav>
+        <nav aria-label="Tindakan projek" className="hidden 2xl:flex shrink-0 items-center gap-3">{navItems.filter(item => item.page === 'enquiry' || item.page === 'contact').map(item => navButton(item))}</nav>
         <button ref={toggleRef} onClick={() => setMobileMenuOpen(open => !open)} aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation" aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'} className={`2xl:hidden min-h-12 min-w-12 flex items-center justify-center rounded-lg border border-slate-600 text-slate-200 hover:bg-slate-800 ${focusStyle}`}>
           {mobileMenuOpen ? <X aria-hidden="true" className="w-6 h-6" /> : <Menu aria-hidden="true" className="w-6 h-6" />}
         </button>
