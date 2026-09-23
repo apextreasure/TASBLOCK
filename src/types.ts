@@ -2,7 +2,8 @@ export type PageType =
   | 'home' 
   | 'services' 
   | 'products' 
-  | 'calculator' 
+  | 'calculator' // Legacy route alias.
+  | 'enquiry'
   | 'projects' 
   | 'training' 
   | 'about' 
@@ -25,11 +26,11 @@ export interface ProductSpec {
   name: string;
   code: string;
   role: string;
-  dimensions: string; // e.g. "400mm x 150mm x 200mm"
-  weight: string; // e.g. "11.5 kg"
-  compressiveStrength: string; // e.g. "> 7.5 N/mm²"
-  fireRating: string; // e.g. "2 Jam (SIRIM Ujian Ketahanan Api)"
-  coveragePerM2: string; // e.g. "12.5 unit / m²"
+  dimensions: string; // Empty until approved documentation is available.
+  weight: string;
+  compressiveStrength: string;
+  fireRating: string;
+  coveragePerM2: string;
   description: string;
   keyFeatures: string[];
   recommendedUse: string;

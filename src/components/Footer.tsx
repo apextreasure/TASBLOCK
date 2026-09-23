@@ -1,215 +1,84 @@
 import { PageType } from '../types';
-import { Building2, Phone, Mail, MapPin, Clock, ArrowUpRight, Award, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import { COMPANY_CONTACT } from '../data/tasblockData';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { COMPANY_CONTACT, SERVICES_DATA } from '../data/tasblockData';
 
-interface FooterProps {
-  onNavigate: (page: PageType) => void;
-}
+interface FooterProps { onNavigate: (page: PageType) => void; }
+const linkStyle = 'min-h-11 inline-flex items-center text-left rounded-md hover:text-[#99D5D9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#99D5D9]';
 
 export default function Footer({ onNavigate }: FooterProps) {
   const handleLink = (page: PageType) => {
     onNavigate(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
+  const quickLinks: { page: PageType; label: string }[] = [
+    { page: 'home', label: 'Laman Utama' },
+    { page: 'products', label: 'Komponen Sistem' },
+    { page: 'projects', label: 'Rujukan Projek Pengeluar' },
+    { page: 'about', label: 'Mengenai Kami' },
+    { page: 'enquiry', label: 'Pertanyaan Projek' },
+    { page: 'contact', label: 'Hubungi Kami & Soalan Lazim' },
+  ];
 
   return (
-    <footer className="bg-[#050f1a] text-slate-300 border-t border-slate-800 pt-16 pb-12 relative overflow-hidden">
-      {/* Background Architectural Grid Pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#3EABB0_1px,transparent_1px)] [background-size:24px_24px]"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Main 4-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          
-          {/* Col 1: Brand & Positioning */}
-          <div className="space-y-4">
+    <footer className="bg-[#050f1a] text-slate-300 border-t border-slate-800 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-10">
+          <div className="min-w-0 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="h-11 w-11 p-1.5 rounded-xl bg-white border border-white/30 shadow-md flex items-center justify-center shrink-0">
-                <img 
-                  src="/tasblock-logo.png" 
-                  alt="Tasblock Builder Logo" 
-                  className="h-full w-full object-contain"
-                  onError={(e) => {
-                    e.currentTarget.src = '/tasblock-logo.svg';
-                  }}
-                />
+              <div className="h-12 w-12 p-1.5 rounded-xl bg-white flex items-center justify-center shrink-0">
+                <img src="/tasblock-logo.png" alt="Tasblock Builder" className="h-full w-full object-contain" onError={(event) => {
+                  if (!event.currentTarget.src.endsWith('/tasblock-logo.svg')) event.currentTarget.src = '/tasblock-logo.svg';
+                }} />
               </div>
-              <div className="flex flex-col justify-center select-none">
-                <span className="text-[17px] font-medium tracking-tight text-slate-300 leading-[1.05] font-sans lowercase">
-                  tasblock
-                </span>
-                <span className="text-[13px] font-extrabold tracking-[0.19em] text-[#3B82F6] leading-[1.05] uppercase font-sans mt-0.5">
-                  BUILDER
-                </span>
+              <div className="flex flex-col">
+                <span className="text-lg text-slate-200 leading-tight">tasblock</span>
+                <span className="text-sm font-extrabold tracking-[0.19em] text-[#4A90E2]">BUILDER</span>
               </div>
             </div>
-            
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Membantu kontraktor tempatan, tukang rumah dan pemilik individu membina struktur kediaman yang pantas, kukuh dan jimat dengan mengadaptasi teknologi <strong>IBS Tasblock Flexi-Fit</strong>.
-            </p>
-
-            <div className="pt-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#245D98]/20 border border-[#3EABB0]/30 text-[#3EABB0] text-xs font-semibold">
-                <ShieldCheck className="w-4 h-4" />
-                <span>Teknologi Bertauliah IBS CIDB</span>
-              </div>
-            </div>
+            <p className="text-sm leading-relaxed">{COMPANY_CONTACT.tagline}. Reka & bina, latihan pemasangan, pembekalan komponen serta bekal & pasang.</p>
           </div>
 
-          {/* Col 2: Perkhidmatan Teras */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading border-b border-slate-800 pb-2">
-              4 Perkhidmatan Kami
-            </h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <button 
-                  onClick={() => handleLink('services')} 
-                  className="hover:text-[#3EABB0] flex items-center gap-1.5 transition-colors text-left"
-                >
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#3EABB0]" />
-                  <span>Reka & Bina Rumah IBS (Design & Build)</span>
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleLink('training')} 
-                  className="hover:text-[#3EABB0] flex items-center gap-1.5 transition-colors text-left"
-                >
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#3EABB0]" />
-                  <span>Bengkel Latihan & Pensijilan Kontraktor</span>
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleLink('products')} 
-                  className="hover:text-[#3EABB0] flex items-center gap-1.5 transition-colors text-left"
-                >
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#3EABB0]" />
-                  <span>Pembekalan Blok IBS Flexi-Fit</span>
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleLink('services')} 
-                  className="hover:text-[#3EABB0] flex items-center gap-1.5 transition-colors text-left"
-                >
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#3EABB0]" />
-                  <span>Pakej Bekal & Pasang Dinding (Supply & Install)</span>
-                </button>
-              </li>
-              <li className="pt-2">
-                <button 
-                  onClick={() => handleLink('calculator')} 
-                  className="text-[#3EABB0] font-semibold hover:underline flex items-center gap-1"
-                >
-                  <span>Kira Anggaran Kos Projek Anda &rarr;</span>
-                </button>
-              </li>
+          <nav aria-label="Perkhidmatan di pengaki" className="min-w-0">
+            <h2 className="font-bold text-white mb-3">Perkhidmatan</h2>
+            <ul className="text-sm">
+              {SERVICES_DATA.map(service => (
+                <li key={service.id}><button onClick={() => { if (service.id === 'training') handleLink('training'); else { window.location.hash = `services?service=${encodeURIComponent(service.id)}`; window.scrollTo({ top: 0 }); } }} className={linkStyle}>{service.title}</button></li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Col 3: Halaman Pantas */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading border-b border-slate-800 pb-2">
-              Pautan Pantas
-            </h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <button onClick={() => handleLink('home')} className="hover:text-[#3EABB0] transition-colors">
-                  Laman Utama
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleLink('products')} className="hover:text-[#3EABB0] transition-colors">
-                  Spesifikasi Teknikal Blok Flexi-Fit
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleLink('projects')} className="hover:text-[#3EABB0] transition-colors">
-                  Galeri Projek & Kajian Kes Tapak
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleLink('about')} className="hover:text-[#3EABB0] transition-colors">
-                  Mengenai Kami & Hubungan Induk
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleLink('contact')} className="hover:text-[#3EABB0] transition-colors">
-                  Borang Sebut Harga & Soalan Lazim (FAQ)
-                </button>
-              </li>
+          <nav aria-label="Pautan di pengaki" className="min-w-0">
+            <h2 className="font-bold text-white mb-3">Pautan Pantas</h2>
+            <ul className="text-sm">{quickLinks.map(link => <li key={link.page}><button onClick={() => handleLink(link.page)} className={linkStyle}>{link.label}</button></li>)}</ul>
+          </nav>
+
+          <div className="min-w-0">
+            <h2 className="font-bold text-white mb-3">Hubungi Kami</h2>
+            <ul className="space-y-3 text-sm break-words">
+              {COMPANY_CONTACT.phoneRaw.trim() && COMPANY_CONTACT.phoneDisplay.trim() && (
+                <li className="flex items-center gap-3"><Phone aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><a href={`tel:+${COMPANY_CONTACT.phoneRaw}`} className={linkStyle}>{COMPANY_CONTACT.phoneDisplay}</a></li>
+              )}
+              {COMPANY_CONTACT.whatsappBaseUrl.trim() && (
+                <li><a href={COMPANY_CONTACT.whatsappBaseUrl} target="_blank" rel="noopener noreferrer" className={`${linkStyle} text-[#99D5D9]`}>WhatsApp (tab baharu) ↗</a></li>
+              )}
+              {COMPANY_CONTACT.email.trim() && (
+                <li className="flex items-center gap-3"><Mail aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><a href={`mailto:${COMPANY_CONTACT.email}`} className={`${linkStyle} min-w-0 break-all`}>{COMPANY_CONTACT.email}</a></li>
+              )}
+              {COMPANY_CONTACT.address.trim() && (
+                <li className="flex items-start gap-3"><MapPin aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><span>{COMPANY_CONTACT.address}</span></li>
+              )}
+              {COMPANY_CONTACT.operatingHours.trim() && (
+                <li className="flex items-start gap-3"><Clock aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><span>{COMPANY_CONTACT.operatingHours}</span></li>
+              )}
+              {COMPANY_CONTACT.coverageAreas.trim() && <li>Kawasan perkhidmatan: {COMPANY_CONTACT.coverageAreas}</li>}
             </ul>
-          </div>
-
-          {/* Col 4: Maklumat Perhubungan & Hub */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading border-b border-slate-800 pb-2">
-              Pusat Operasi & Hub
-            </h4>
-            <ul className="space-y-2.5 text-xs">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#3EABB0] shrink-0 mt-0.5" />
-                <span className="text-slate-400">{COMPANY_CONTACT.address}</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#3EABB0] shrink-0" />
-                <a 
-                  href={`https://wa.me/${COMPANY_CONTACT.phoneRaw}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-[#3EABB0] transition-colors"
-                >
-                  {COMPANY_CONTACT.phoneDisplay}
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#3EABB0] shrink-0" />
-                <a href={`mailto:${COMPANY_CONTACT.email}`} className="hover:text-[#3EABB0] transition-colors">
-                  {COMPANY_CONTACT.email}
-                </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-[#3EABB0] shrink-0 mt-0.5" />
-                <span className="text-slate-400">{COMPANY_CONTACT.operatingHours}</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        {/* Legal Transparency & Attribution Notice */}
-        <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-400 text-xs leading-relaxed mb-8">
-          <div className="flex items-start gap-3">
-            <Award className="w-5 h-5 text-[#3EABB0] shrink-0 mt-0.5" />
-            <div>
-              <strong className="text-slate-200">Ketelusan Korporat & Sandaran Sistem:</strong>
-              <p className="mt-1">
-                Tasblock Builder adalah platform operasi perumahan individu, latihan praktikal kontraktor dan pembekalan runcit bagi sistem IBS Tasblock Flexi-Fit. 
-                Semua hak pengilangan blok, rekod paten, ujian makmal rintangan api & mampatan SIRIM, perakuan CIDB IBS, serta pelaksanaan projek-projek mega/infrastruktur komersial terdahulu adalah disandarkan secara rasmi kepada <strong>Tasblock (M) Sdn. Bhd.</strong> / sistem IBS Tasblock induk.
-              </p>
-            </div>
           </div>
         </div>
 
-        {/* Bottom Strip */}
-        <div className="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>
-            &copy; {new Date().getFullYear()} Tasblock Builder. Hak Cipta Terpelihara. Mengadaptasi Sistem IBS Tasblock Flexi-Fit.
-          </p>
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1 text-slate-400">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#3EABB0]" />
-              Sistem Terbukti di Malaysia
-            </span>
-            <button onClick={() => handleLink('contact')} className="hover:text-slate-300 transition-colors">
-              Dasar Privasi & Khidmat Nasihat
-            </button>
-          </div>
+        <div className="p-5 rounded-xl bg-slate-900/70 border border-slate-800 text-sm leading-relaxed">
+          <p><strong className="text-white">Pengeluar dan Builder mempunyai peranan berbeza.</strong> Tasblock (M) Sdn. Bhd. ialah syarikat keluarga yang membangunkan dan mengilang teknologi Tasblock. Tasblock Builder ialah inisiatif berasingan untuk kontraktor tempatan, pelanggan individu dan projek berskala kecil. Rekod projek dan kelayakan pengeluar bukan secara automatik rekod atau kelayakan Builder.</p>
         </div>
-
+        <p className="border-t border-slate-800 mt-8 pt-6 text-sm text-slate-400">&copy; {new Date().getFullYear()} Tasblock Builder. Hak cipta terpelihara.</p>
       </div>
     </footer>
   );

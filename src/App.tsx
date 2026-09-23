@@ -10,7 +10,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import TrainingPage from './pages/TrainingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import IbsCalculator from './components/IbsCalculator';
+import ProjectEnquiry from './components/IbsCalculator';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('home');
@@ -18,12 +18,16 @@ export default function App() {
   // Handle URL hash routing on mount and change
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') as PageType;
+      const [route, query] = window.location.hash.slice(1).split('?');
+      const hash = (route === 'calculator' ? 'enquiry' : route || 'home') as PageType;
+      if (route === 'calculator') {
+        window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#enquiry${query ? `?${query}` : ''}`);
+      }
       const validPages: PageType[] = [
         'home', 
         'services', 
         'products', 
-        'calculator', 
+        'enquiry',
         'projects', 
         'training', 
         'about', 
@@ -31,6 +35,8 @@ export default function App() {
       ];
       if (validPages.includes(hash)) {
         setCurrentPage(hash);
+      } else {
+        setCurrentPage('home');
       }
     };
 
@@ -43,8 +49,9 @@ export default function App() {
   }, []);
 
   const handleNavigate = (page: PageType) => {
-    setCurrentPage(page);
-    window.location.hash = page;
+    const destination = page === 'calculator' ? 'enquiry' : page;
+    setCurrentPage(destination);
+    window.location.hash = destination;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -58,20 +65,20 @@ export default function App() {
         {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
         {currentPage === 'services' && <ServicesPage onNavigate={handleNavigate} />}
         {currentPage === 'products' && <ProductsPage onNavigate={handleNavigate} />}
-        {currentPage === 'calculator' && (
+        {currentPage === 'enquiry' && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
               <span className="text-xs font-bold uppercase tracking-widest text-[#3EABB0]">
-                Alat Penganggar Segera
+                Bincangkan keperluan anda
               </span>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-                Kalkulator Kos & Blok IBS Tasblock
+                Pertanyaan Projek
               </h1>
               <p className="text-xs sm:text-sm text-slate-300">
-                Pilih mod bina rumah atau dinding pagar di bawah untuk mendapatkan anggaran bilangan blok dan bajet kasar secara telus.
+                Sediakan ringkasan projek untuk perbincangan. Tiada anggaran automatik atau komitmen kerja dibuat melalui borang ini.
               </p>
             </div>
-            <IbsCalculator />
+            <ProjectEnquiry />
           </div>
         )}
         {currentPage === 'projects' && <ProjectsPage onNavigate={handleNavigate} />}
@@ -81,7 +88,7 @@ export default function App() {
       </main>
 
       {/* Persistent Floating WhatsApp Contact Widget */}
-      <WhatsAppButton />
+      {!['enquiry', 'contact', 'training'].includes(currentPage) && <WhatsAppButton />}
 
       {/* Architectural Comprehensive Footer */}
       <Footer onNavigate={handleNavigate} />
