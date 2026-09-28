@@ -9,11 +9,11 @@ interface NavbarProps {
 
 const navItems: { page: PageType; label: string }[] = [
   { page: 'home', label: 'Utama' },
+  { page: 'about', label: 'Mengenai Kami' },
   { page: 'services', label: 'Perkhidmatan' },
-  { page: 'products', label: 'Komponen Sistem' },
+  { page: 'products', label: 'Sistem Tasblock' },
   { page: 'projects', label: 'Rujukan Projek' },
   { page: 'training', label: 'Latihan' },
-  { page: 'about', label: 'Mengenai Kami' },
   { page: 'enquiry', label: 'Pertanyaan Projek' },
   { page: 'contact', label: 'Hubungi' },
 ];

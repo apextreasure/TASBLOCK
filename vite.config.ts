@@ -1,14 +1,18 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import express from 'express';
+import {fileURLToPath} from 'node:url';
+import {defineConfig, type Connect} from 'vite';
+
+const projectRoot = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), { name: 'local-tasblock-media', configureServer(server) { server.middlewares.use('/videos/tasblock', express.static(path.resolve(projectRoot, 'media/tasblock')) as unknown as Connect.NextHandleFunction); } }],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(projectRoot, '.'),
       },
     },
     server: {

@@ -1,53 +1,17 @@
+import ProjectGallery from '../components/ProjectGallery';
+import { useEffect } from 'react';
 import { PageType } from '../types';
 import { MANUFACTURER_CASES } from '../data/tasblockData';
-import { ArrowRight, BookOpen, Info } from 'lucide-react';
-
-export default function ProjectsPage({ onNavigate }: { onNavigate: (page: PageType) => void }) {
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y-12">
-      <header className="max-w-3xl mx-auto text-center space-y-5">
-        <span className="inline-flex gap-2 items-center text-sm text-[#99D5D9] border border-[#3EABB0]/40 rounded-full px-4 py-2 bg-[#245D98]/20"><BookOpen size={16} /> Rujukan teknologi</span>
-        <h1 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">Projek & aplikasi Tasblock</h1>
-        <p className="text-slate-300 leading-relaxed">Kenali penggunaan teknologi melalui rekod dalam profil korporat Tasblock (M) Sdn. Bhd. Rujukan pengeluar ini tidak dipersembahkan sebagai projek yang dilaksanakan oleh Tasblock Builder.</p>
-      </header>
-      <section aria-labelledby="case-title" className="space-y-6">
-        <h2 id="case-title" className="text-2xl font-bold text-white font-heading">Rekod dalam profil pengeluar</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {MANUFACTURER_CASES.map((record) => (
-            <article key={record.id} className="rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/80 flex flex-col">
-              <figure className="p-4 pb-4">
-                <div className="aspect-[3/2] overflow-hidden rounded-xl bg-[#102c46]">
-                  <img src={record.image.src} alt={record.image.alt} width={record.image.width} height={record.image.height} loading="lazy" decoding="async" className="w-full h-full object-cover" style={{ objectPosition: record.image.position }} />
-                </div>
-                <figcaption className="text-xs text-slate-400 mt-3 space-y-2">
-                  <p>{record.image.caption}. Sumber: profil Tasblock (M) Sdn. Bhd., halaman fizikal {record.image.page}. Rujukan pengeluar, bukan portfolio Builder.</p>
-                  <a href={record.image.src} target="_blank" rel="noopener noreferrer" className="inline-flex py-2 text-[#99D5D9] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#99D5D9]" aria-label={`Lihat foto penuh: ${record.title} (tab baharu)`}>Lihat foto penuh · {record.image.width} × {record.image.height} px (tab baharu)</a>
-                </figcaption>
-              </figure>
-              <div className="p-6 sm:p-8 bg-gradient-to-br from-[#1b3858] to-[#0d2238] border-b border-slate-800">
-                <p className="text-sm text-[#99D5D9] mb-4">Tasblock (M) Sdn. Bhd. · Rekod pengeluar</p>
-                {record.year ? <p className="text-5xl font-bold text-[#3EABB0] font-mono mb-4">{record.year}</p> : <p className="text-sm text-slate-400 mb-4">Tahun tidak dinyatakan dalam sumber</p>}
-                <h3 className="text-2xl font-bold font-heading text-white">{record.title}</h3>
-              </div>
-              <div className="p-6 sm:p-8 space-y-5 flex-1">
-                <p className="text-slate-300 leading-relaxed">{record.description}</p>
-                <ul className="flex flex-wrap gap-2">{record.facts.map(fact => <li key={fact} className="text-sm text-[#99D5D9] border border-[#3EABB0]/30 rounded-lg px-3 py-2 bg-[#245D98]/15">{fact}</li>)}</ul>
-                <p className="text-sm text-slate-300 leading-relaxed border-l-2 border-[#3EABB0] pl-4">{record.caveat}</p>
-                <p className="text-xs text-slate-400">Sumber: {record.source}. Peranan Tasblock Builder tidak disahkan dalam rekod ini.</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-      <aside className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex items-start gap-4">
-        <Info className="text-[#3EABB0] shrink-0 mt-1" aria-hidden="true" />
-        <div className="space-y-2"><h2 className="text-lg font-bold text-white">Konteks yang jelas untuk setiap projek</h2><p className="text-sm text-slate-300 leading-relaxed">Foto dipaparkan dalam bingkai landskap seragam; pautan foto penuh membuka imej tanpa potongan paparan. Resolusi asal sesetengah foto adalah rendah dan dikekalkan tanpa penjanaan atau penggantian AI. Foto di atas diambil daripada bahagian projek yang berkaitan dalam profil korporat pengeluar. Portfolio khusus Builder akan memerlukan pengesahan peranan, status kerja dan kebenaran penggunaan foto sebelum diterbitkan.</p></div>
-      </aside>
-      <section className="rounded-3xl border border-[#3EABB0]/30 bg-gradient-to-r from-[#1b3858] to-[#071827] p-8 space-y-4">
-        <h2 className="text-2xl font-bold text-white font-heading">Setiap tapak mempunyai keperluan tersendiri</h2>
-        <p className="text-slate-300">Kongsikan pelan, lokasi dan skop anda untuk perbincangan kesesuaian sistem. Kos dan jadual perlu dinilai bagi projek anda sendiri.</p>
-        <button onClick={() => onNavigate('contact')} className="inline-flex gap-2 items-center px-6 py-3 bg-[#3EABB0] rounded-xl font-bold text-[#071827] hover:brightness-110">Bincang projek anda <ArrowRight size={18} /></button>
-      </section>
-    </div>
-  );
+import { presentationProjects } from '../data/presentationProjects';
+import { asset } from '../components/PresentationMedia';
+export default function ProjectsPage({onNavigate}:{onNavigate:(page:PageType)=>void}) {
+ const projects = [
+ ...presentationProjects.map(p=>({id:p.id,title:p.title,description:p.description+(p.id==='seaplast-2023'?' Pengeluar melaporkan pembinaan dalam 1 hari oleh 2 pekerja menggunakan komponen guna semula.':''),images:p.images.map(id=>asset(id).url),facts:[p.location,p.year]})),
+ ...MANUFACTURER_CASES.map(p=>({id:p.id,title:p.title,description:p.description+' '+p.caveat+(p.id==='schools-2017'?' Kajian bilik darjah 9 m × 7.5 m turut membandingkan struktur, tenaga kerja, berat bahan, logistik dan sisa.':''),images:p.id==='schools-2017'?[p.image.src,...[100,101,102,103,104,105,106,107,108,109,110].map(n=>`/images/tasblock/school-${n}.jpeg`)]:p.id==='istanbul-office'?['/images/tasblock/source-132.jpeg',p.image.src]:p.id==='baghdad-warehouse'?['/images/tasblock/source-134.jpeg','/images/tasblock/source-133.jpeg',p.image.src]:p.id==='felda-hostel'?[p.image.src,...['felda-hostel-wall-assembly-01','felda-hostel-wall-assembly-02','felda-hostel-component-delivery'].map(id=>asset(id).url)]:p.id==='demo-2016'?[p.image.src,asset('tasblock-show-house-2016-exterior').url]:[p.image.src],facts:['istanbul-office','baghdad-warehouse'].includes(p.id)?[...p.facts,'Projek rakan kerjasama · 2011']:p.facts})),
+ {id:'lktn',title:'Rumah IBS LKTN',description:'Pemasangan lengkap dilaporkan dalam 3 hari dalam kajian kes pengeluar. Tempoh ini merujuk skop pemasangan kes tersebut.',images:['/images/tasblock/project-lktn.jpeg'],facts:['Rumah IBS','3 hari pemasangan']},
+ {id:'icw',title:'Struktur kecil ICW 2017',description:'Satu hentian bas dan satu pergola di CIDB Convention Centre, dengan tempoh binaan dilaporkan 4 jam bagi setiap struktur.',images:['/images/tasblock/project-icw.jpeg'],facts:['2017','4 jam setiap struktur']},
+ {id:'dtact',title:'D-TACT',description:'Konsep struktur mudah alih prasiap volumetrik untuk kemudahan pengesanan penyakit berjangkit.',images:['/images/tasblock/project-dtact.jpeg'],facts:['Struktur mudah alih']},
+ ];
+ useEffect(()=>{const id=new URLSearchParams(window.location.hash.split('?')[1]).get('project');if(id) requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({block:'start'}));},[]);
+ return <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8"><header className="max-w-3xl space-y-4"><p className="text-sm text-[#99D5D9]">PROJEK & APLIKASI</p><h1 className="text-3xl sm:text-5xl font-bold text-white">Tasblock di tapak sebenar</h1><p className="text-slate-300">Rujukan projek Tasblock (M) Sdn. Bhd. Setiap projek dipaparkan sekali, bersama foto dan butiran kes. Rekod ini ialah pengalaman pengeluar.</p></header><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">{projects.map(p=><article id={p.id} key={p.id} className="scroll-mt-36 min-w-0 h-full flex flex-col rounded-2xl overflow-hidden border border-slate-700 bg-slate-900/50"><ProjectGallery images={p.images} title={p.title}/><div className="p-5 flex flex-1 flex-col gap-4"><h2 className="text-lg leading-snug font-bold text-white md:min-h-[3.25rem]">{p.title}</h2><div className="flex flex-wrap gap-2">{p.facts.map(f=><span key={f} className="text-xs rounded-full bg-[#12314a] px-3 py-1 text-[#99D5D9]">{f}</span>)}</div><p className="text-sm text-slate-300 leading-relaxed">{p.description}</p></div></article>)}</div><button onClick={()=>onNavigate('enquiry')} className="rounded-xl bg-[#99D5D9] text-[#071827] font-bold px-6 py-3">Bincangkan projek anda →</button></div>;
 }

@@ -21,7 +21,7 @@ export default function ContactPage({ onNavigate: _onNavigate }: { onNavigate: (
       <ProjectEnquiry />
       <section className="max-w-5xl mx-auto space-y-5" aria-labelledby="contact-faq-title">
         <h2 id="contact-faq-title" className="text-2xl font-bold text-white font-heading">Soalan lazim</h2>
-        {FAQ_DATA.map(faq => <details key={faq.question} className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5"><summary className="font-semibold text-slate-100 cursor-pointer">{faq.question}</summary><p className="pt-4 text-sm text-slate-300 leading-relaxed">{faq.answer}</p></details>)}
+        {FAQ_DATA.map(faq => <section key={faq.question} className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5"><h3 className="font-semibold text-slate-100 cursor-pointer">{faq.question}</h3><p className="pt-4 text-sm text-slate-300 leading-relaxed">{faq.answer}</p></section>)}
       </section>
     </div>
   );

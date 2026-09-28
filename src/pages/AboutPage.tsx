@@ -1,3 +1,4 @@
+import { ManufacturerDirection, IndustryAndSolution } from '../components/PresentationContent';
 import { PageType } from '../types';
 import { SERVICES_DATA } from '../data/tasblockData';
 import { Building2, HeartHandshake, ArrowRight, Layers } from 'lucide-react';
@@ -18,6 +19,8 @@ export default function AboutPage({ onNavigate }: { onNavigate: (page: PageType)
         </div>
         <p className="text-sm text-slate-400 leading-relaxed border-t border-slate-800 pt-5">Hubungan keluarga ini tidak menyatakan status anak syarikat atau pengedar eksklusif. Rekod projek dan dokumen pengeluar tidak secara automatik menjadi rekod pengalaman atau akreditasi Tasblock Builder.</p>
       </section>
+      <ManufacturerDirection />
+      <section className="rounded-2xl border border-slate-700 p-5 sm:p-8"><h3 className="py-2 text-xl font-bold text-[#99D5D9]">Mengapa Tasblock dibangunkan? Cabaran industri & pendekatan pengeluar</h3><div className="pt-8"><IndustryAndSolution /></div></section>
       <section className="space-y-6"><h2 className="text-2xl font-bold text-white font-heading">Bagaimana kami boleh membantu</h2><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">{SERVICES_DATA.map(service => <article key={service.id} className="rounded-2xl border border-slate-800 p-6 bg-slate-900/60 space-y-3"><Layers className="text-[#3EABB0]" aria-hidden="true" /><h3 className="font-bold text-white text-lg">{service.title}</h3><p className="text-sm text-slate-300 leading-relaxed">{service.shortDesc}</p></article>)}</div></section>
       <section className="text-center space-y-5"><h2 className="text-2xl font-bold text-white font-heading">Mulakan dengan keperluan anda</h2><p className="text-slate-300">Pilih perkhidmatan yang sesuai atau daftar minat untuk mengetahui aturan latihan.</p><div className="flex flex-wrap gap-3 justify-center"><button onClick={() => onNavigate('services')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#3EABB0] text-[#071827] font-bold hover:brightness-110">Terokai perkhidmatan <ArrowRight size={18} /></button><button onClick={() => onNavigate('training')} className="px-6 py-3 rounded-xl bg-slate-800 text-white border border-slate-700 font-semibold hover:bg-slate-700">Daftar minat latihan</button></div></section>
     </div>

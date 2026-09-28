@@ -1,30 +1,32 @@
 @import "tailwindcss";
 
-/* Readable content scale on every route. Keep header navigation geometry separate.
-   rem units preserve browser font preferences and zoom. */
+/* Keep captions and body copy distinct; retain rem-based zoom accessibility. */
 main, footer {
-  --text-xs: 1.125rem;
-  --text-xs--line-height: 1.65;
-  --text-sm: 1.125rem;
-  --text-sm--line-height: 1.65;
-  --text-base: 1.125rem;
-  --text-base--line-height: 1.65;
-  --text-lg: 1.25rem;
+  --text-xs: .75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: .875rem;
+  --text-sm--line-height: 1.6;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
+  --text-lg: 1.125rem;
   --text-lg--line-height: 1.6;
-  --color-slate-400: #cbd5e1;
-  --color-slate-500: #b8c9db;
-  font-size: 1.125rem;
-  line-height: 1.65;
-  overflow-wrap: anywhere;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
 }
 
-@media (min-width: 768px) {
-  main, footer {
-    --text-base: 1.25rem;
-    font-size: 1.25rem;
-  }
+/* Hide the track, not scrolling. Focusable regions retain keyboard access. */
+.scroll-without-bar { scrollbar-width: none; -ms-overflow-style: none; }
+.scroll-without-bar::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.gallery-control { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .project-gallery .gallery-control { opacity: 0; transition: opacity 150ms ease; }
+  .project-gallery:hover .gallery-control,
+  .project-gallery:focus-within .gallery-control { opacity: 1; }
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .project-gallery .gallery-control { transition: none; }
+}
 
 @layer base {
   body {

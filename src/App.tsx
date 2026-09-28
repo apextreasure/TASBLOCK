@@ -48,6 +48,11 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.hash.split('?')[1]);
+    if (!params.has('project')) window.scrollTo({top:0, behavior:'instant'});
+  }, [currentPage]);
+
   const handleNavigate = (page: PageType) => {
     const destination = page === 'calculator' ? 'enquiry' : page;
     setCurrentPage(destination);

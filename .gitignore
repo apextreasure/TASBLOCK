@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Local video masters; published videos are served by Cloudinary.
+media/

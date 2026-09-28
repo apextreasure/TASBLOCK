@@ -79,35 +79,35 @@ export const MANUFACTURER_CASES = [
     caveat: 'Tempoh merujuk kepada pakej yang dilaporkan dalam profil pengeluar. Ia bukan tempoh setiap sekolah dan tidak boleh digunakan sebagai janji bagi projek baharu.'
   },
   {
-    id: 'felda-hostel', year: null, title: 'Asrama FELDA untuk KPF Agro', source: 'Profil Tasblock (M) Sdn. Bhd., halaman fizikal 18',
+    id: 'felda-hostel', year: null, title: 'Asrama FELDA untuk KPF Agro', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-felda-hostel.jpeg', width: 343, height: 278, alt: 'Bangunan asrama dalam rekod FELDA pengeluar', caption: 'Rujukan asrama FELDA / KPF Agro', page: 18, position: 'center' },
     description: 'Profil pengeluar merekodkan enam blok asrama untuk KPF Agro. Lokasi yang disenaraikan termasuk Kg Awah, Raja Alias 2, Jenderak Utara, Triang dan Bukit Tongkat.',
-    facts: ['6 blok asrama', 'KPF Agro'],
+    facts: ['6 blok asrama', 'KPF Agro', '4 hari pemasangan struktur mengikut skop'],
     caveat: 'Empat hari yang dilaporkan merujuk pemasangan struktur bagi satu blok penginapan dan blok tandas di setiap lokasi, bukan keseluruhan kerja siap. Lokasi khusus foto ini tidak dinyatakan.'
   },
   {
-    id: 'trabzon-house', year: '2013', title: 'Rumah kampung Trabzon', source: 'Profil Tasblock (M) Sdn. Bhd., halaman fizikal 19',
+    id: 'trabzon-house', year: '2013', title: 'Rumah kampung Trabzon', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-trabzon-house.jpeg', width: 314, height: 265, alt: 'Rumah dua tingkat yang dilabel Trabzon village house oleh pengeluar', caption: 'Trabzon village house, foto kiri atas pada halaman sumber', page: 19, position: 'center' },
     description: 'Profil pengeluar menyenaraikan rumah dua tingkat seluas 300 m² di Trabzon. Rekod tersebut menyatakan siap pada Februari 2013 dalam 24 hari ketika musim sejuk.',
     facts: ['2 tingkat', '300 m²', 'Februari 2013'],
     caveat: 'Tempoh ialah rekod khusus pengeluar, bukan jaminan jadual bagi projek lain. Skop kerja terperinci tidak dihuraikan pada halaman ini.'
   },
   {
-    id: 'moscow-house', year: '2013', title: 'Rumah mampu milik — label “Moscow”', source: 'Profil Tasblock (M) Sdn. Bhd., halaman fizikal 19',
+    id: 'moscow-house', year: '2013', title: 'Rumah mampu milik — label “Moscow”', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-moscow-house.jpeg', width: 318, height: 267, alt: 'Rumah setingkat dengan tingkap melengkung berlabel Moscow affordable house dalam profil', caption: 'Moscow affordable house, foto kanan bawah pada halaman sumber', page: 19, position: 'center' },
     description: 'Di bawah label “Moscow affordable house”, profil merekodkan rumah 70 m² yang siap pada April 2013 dalam tujuh hari bekerja, dengan bukaan tingkap melengkung.',
     facts: ['70 m²', 'April 2013', 'Bukaan tingkap melengkung'],
     caveat: 'Label “Moscow” muncul pada halaman bertajuk “Residential Projects in Türkiye”. Lokasi negara tidak disahkan kerana sumber tidak konsisten; nama dikekalkan seperti dalam profil. Tempoh bukan jaminan projek baharu.'
   },
   {
-    id: 'istanbul-office', year: null, title: 'Pejabat tapak lima tingkat, Istanbul', source: 'Profil Tasblock (M) Sdn. Bhd., halaman fizikal 20',
+    id: 'istanbul-office', year: null, title: 'Pejabat tapak lima tingkat, Istanbul', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-istanbul-office.jpeg', width: 487, height: 317, alt: 'Fasad bangunan pejabat tapak lima tingkat di Istanbul dalam profil pengeluar', caption: 'Fasad pejabat tapak di Esenyurt, Istanbul', page: 20, position: 'center' },
     description: 'Profil pengeluar menyenaraikan bangunan pejabat tapak lima tingkat di Esenyurt, Istanbul sebagai rujukan penggunaan sistem Tasblock untuk bangunan bertingkat.',
     facts: ['5 tingkat', 'Esenyurt, Istanbul'],
     caveat: 'Tahun dan tempoh pembinaan tidak dinyatakan pada halaman sumber. Rujukan ini bukan pengesahan kesesuaian sistem bagi semua bangunan bertingkat.'
   },
   {
-    id: 'baghdad-warehouse', year: null, title: 'Gudang Pepsi, Baghdad', source: 'Profil Tasblock (M) Sdn. Bhd., halaman fizikal 21',
+    id: 'baghdad-warehouse', year: null, title: 'Gudang Pepsi, Baghdad', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-baghdad-warehouse.jpeg', width: 800, height: 362, alt: 'Ruang dalaman gudang Pepsi di Baghdad dalam rekod pengeluar', caption: 'Ruang dalaman gudang Pepsi, Baghdad', page: 21, position: 'center' },
     description: 'Profil pengeluar merekodkan gudang Pepsi seluas 4,000 m² di Baghdad dengan ketinggian dinding sembilan meter. Tempoh pemasangan seni bina dan struktur dilaporkan sebagai 41 hari.',
     facts: ['4,000 m²', 'Dinding 9 m', '41 hari pemasangan'],

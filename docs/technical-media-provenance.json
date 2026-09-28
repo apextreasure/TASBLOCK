@@ -1,0 +1,58 @@
+[
+  {
+    "file": "technical-plaster-demonstration.png",
+    "source_media": "image37.png",
+    "source_slide": 16,
+    "width": 848,
+    "height": 480,
+    "sha256": "346a042ab2c1ed3b368db46c85358bc7deb3ce4694ace9726b74406ea81fdbcc"
+  },
+  {
+    "file": "technical-wall-mounted-fixture.jpeg",
+    "source_media": "image39.jpeg",
+    "source_slide": 17,
+    "width": 699,
+    "height": 427,
+    "sha256": "03ea3f1cddea5147be021e5ace22a4c9ca57cf0eb0d80907e200057553fdad92"
+  },
+  {
+    "file": "technical-fire-demonstration.png",
+    "source_media": "image41.png",
+    "source_slide": 19,
+    "width": 352,
+    "height": 640,
+    "sha256": "efee95a7ebacdc11a6bb88d63b874c23ab826f3d29675c9c82f047558d8ed0dd"
+  },
+  {
+    "file": "technical-flood-test.jpeg",
+    "source_media": "image46.jpeg",
+    "source_slide": 21,
+    "width": 1280,
+    "height": 960,
+    "sha256": "0e8e02e3575d07a40a55331c1e3493948852b06dca6c3737f7266de5ac370409"
+  },
+  {
+    "file": "technical-wave-test.png",
+    "source_media": "image45.png",
+    "source_slide": 21,
+    "width": 640,
+    "height": 352,
+    "sha256": "8f8663d33b1abc4be6bfdae6a65588c5a0023be0205f91062b23eaba8c146f78"
+  },
+  {
+    "file": "technical-floating-jetty.jpeg",
+    "source_media": "image43.jpeg",
+    "source_slide": 20,
+    "width": 547,
+    "height": 443,
+    "sha256": "b244fb51a59bffd37f9c9bbbc3cda30c310e45b29745cac80d0fc874005e8bbf"
+  },
+  {
+    "file": "technical-component-transport.jpeg",
+    "source_media": "image57.jpeg",
+    "source_slide": 26,
+    "width": 713,
+    "height": 336,
+    "sha256": "6763c8c3f0916d7d95d8942eed30d81ee48a9d2faac86e247fdaf308a9228668"
+  }
+]
