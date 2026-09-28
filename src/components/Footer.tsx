@@ -35,7 +35,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <nav aria-label="Perkhidmatan di pengaki" className="min-w-0">
-            <h2 className="font-bold text-white mb-3">Perkhidmatan</h2>
+            <h2 className="text-xl font-bold text-white mb-3">Perkhidmatan</h2>
             <ul className="text-sm">
               {SERVICES_DATA.map(service => (
                 <li key={service.id}><button onClick={() => { if (service.id === 'training') handleLink('training'); else { window.location.hash = `services?service=${encodeURIComponent(service.id)}`; window.scrollTo({ top: 0 }); } }} className={linkStyle}>{service.title}</button></li>
@@ -44,12 +44,12 @@ export default function Footer({ onNavigate }: FooterProps) {
           </nav>
 
           <nav aria-label="Pautan di pengaki" className="min-w-0">
-            <h2 className="font-bold text-white mb-3">Pautan Pantas</h2>
+            <h2 className="text-xl font-bold text-white mb-3">Pautan Pantas</h2>
             <ul className="text-sm">{quickLinks.map(link => <li key={link.page}><button onClick={() => handleLink(link.page)} className={linkStyle}>{link.label}</button></li>)}</ul>
           </nav>
 
           <div className="min-w-0">
-            <h2 className="font-bold text-white mb-3">Hubungi Kami</h2>
+            <h2 className="text-xl font-bold text-white mb-3">Hubungi Kami</h2>
             <ul className="space-y-3 text-sm break-words">
               {COMPANY_CONTACT.phoneRaw.trim() && COMPANY_CONTACT.phoneDisplay.trim() && (
                 <li className="flex items-center gap-3"><Phone aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><a href={`tel:+${COMPANY_CONTACT.phoneRaw}`} className={linkStyle}>{COMPANY_CONTACT.phoneDisplay}</a></li>

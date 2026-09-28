@@ -62,7 +62,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const navButton = (item: typeof navItems[number], mobile = false) => (
     <button key={item.page} onClick={() => handleNavigate(item.page)}
       aria-current={currentPage === item.page ? 'page' : undefined}
-      className={`${mobile ? 'w-full text-left px-4 text-base' : 'px-3 text-base whitespace-nowrap'} min-h-12 py-3 rounded-lg font-semibold ${focusStyle} ${
+      className={`${mobile ? 'w-full text-left px-4 text-lg' : 'px-3 text-lg whitespace-nowrap'} min-h-12 py-3 rounded-lg font-semibold ${focusStyle} ${
         currentPage === item.page ? 'bg-[#245D98]/40 text-[#99D5D9]' : item.page === 'enquiry' ? 'bg-[#3EABB0] text-[#071827] hover:bg-[#99D5D9]' : 'text-slate-200 hover:bg-slate-800 hover:text-white'
       }`}>
       {item.label}
@@ -74,7 +74,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       onBlur={(event) => {
         if (event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) setMobileMenuOpen(false);
       }}>
-      <div className="bg-[#102c46] px-4 py-2 text-center text-sm text-slate-200">Teknologi komposit Tasblock untuk kontraktor tempatan & projek individu</div>
+      <div className="bg-[#102c46] px-4 py-2 text-center text-base text-slate-200">Teknologi komposit Tasblock untuk kontraktor tempatan & projek individu</div>
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 min-h-20">
         <button onClick={() => handleNavigate('home')} aria-label="Tasblock Builder — Laman Utama" className={`flex items-center gap-3 text-left shrink-0 py-2 rounded-lg ${focusStyle}`}>
           <img src="/images/tasblock-symbol.png" alt="" width="58" height="72" className="h-16 w-auto object-contain" />

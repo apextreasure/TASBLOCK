@@ -3,19 +3,23 @@
 /* Contain wide swipeable content within its own region on narrow screens. */
 html, body { overflow-x: clip; }
 
-/* Keep captions and body copy distinct; retain rem-based zoom accessibility. */
+/* Readable body copy with a clear hierarchy; rem units preserve browser zoom. */
 main, footer {
-  --text-xs: .75rem;
+  --text-xs: .9375rem;
   --text-xs--line-height: 1.5;
-  --text-sm: .875rem;
+  --text-sm: 1rem;
   --text-sm--line-height: 1.6;
-  --text-base: 1rem;
+  --text-base: 1.125rem;
   --text-base--line-height: 1.6;
-  --text-lg: 1.125rem;
+  --text-lg: 1.25rem;
   --text-lg--line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
   overflow-wrap: break-word;
+}
+
+footer {
+  --text-sm: 1.125rem;
 }
 
 /* Hide the track, not scrolling. Focusable regions retain keyboard access. */
