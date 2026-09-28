@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Contain wide swipeable content within its own region on narrow screens. */
+html, body { overflow-x: clip; }
+
 /* Keep captions and body copy distinct; retain rem-based zoom accessibility. */
 main, footer {
   --text-xs: .75rem;
