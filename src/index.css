@@ -68,3 +68,17 @@ footer {
   border-color: rgba(62, 171, 176, 0.45);
   box-shadow: 0 16px 32px -8px rgba(7, 24, 39, 0.6), 0 0 20px -4px rgba(62, 171, 176, 0.2);
 }
+
+/* Native modal keeps keyboard focus within the full-size component preview. */
+.flexi-fit-dialog {
+  width: min(1000px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #475569;
+  border-radius: 20px;
+  background: #071827;
+}
+.flexi-fit-dialog::backdrop { background: rgb(0 0 0 / 80%); }
+body:has(.flexi-fit-dialog[open]) { overflow: hidden; }

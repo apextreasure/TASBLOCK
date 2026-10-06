@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-06",
+  "source": "15 owner-supplied component renders in this conversation",
+  "image_treatment": "Original PNG files copied without alteration; CSS enlarges framing only. Display sizes are not a shared physical scale.",
+  "code_mapping": "Render cell counts and profiles matched to existing website component catalogue; nominal 100 mm thickness and 100 mm MC confirmed in supplied engineer reply.",
+  "assets": [
+    {
+      "file": "public/images/tasblock/flexi-fit/a1.png",
+      "sha256": "eb4fb1781987a50eeb8caf4b6f8e74968c2ea64712da297fdaeebe4958c777a9",
+      "bytes": 75596
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/a12.png",
+      "sha256": "484ededc5c4084a8cfbbd5037923d1b033a3ebabf9d8c1e1f216bad0c7e5b891",
+      "bytes": 359534
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/a2.png",
+      "sha256": "14b18f5ca254c321c8308e24d52db4c834e9cdbf045b0a89ac884df2d6d6bf7d",
+      "bytes": 104629
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/a3.png",
+      "sha256": "fa24402ba61afdaefb1f17a3a403f699551ffd6db665f88e2a77ad3bfcb37d04",
+      "bytes": 235539
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/ac-2x4.png",
+      "sha256": "2f85defc51f8225cfe155979d38bd96718f12afc19ed3cc2e905ec1e5b4bed7c",
+      "bytes": 237284
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/b1.png",
+      "sha256": "583167d99fb21f52345c69bb6b7c551c69b327191ca807b5c1eb731fd0585446",
+      "bytes": 97169
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/b2.png",
+      "sha256": "d448e210fae4c04aadcd777167d153d6c54b4122a4e43d06e9b96fe222f30813",
+      "bytes": 108958
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/b3.png",
+      "sha256": "c9d9d95cab85a32864e7adcc5bc5f634b3ecb82bfe5601efd004a132e71cb036",
+      "bytes": 266897
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/b6.png",
+      "sha256": "070d66d96116fd3a39cca12751bf1dc8715138335f0dd72f48e5e9f0bf68abfa",
+      "bytes": 280726
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/bc-2x4.png",
+      "sha256": "78d9fd8894389f7641289ab07e0f22214d308633ce0464cd97edbc60ca9ee245",
+      "bytes": 273012
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/bc-3x3.png",
+      "sha256": "f91ace7efb8824ccde66ccb83eb0ac65f5d4d295918cf63be2f39f6da74763bb",
+      "bytes": 368950
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/w12.png",
+      "sha256": "997c8487bfa5517d9f7d1a8cb0878296698830bbcf1866b64b5b18b608cda33c",
+      "bytes": 306278
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/w2.png",
+      "sha256": "a1a7d615f93670ab49c938eb4b231046a3cdd9b34f8903e235a86f205d70f2f9",
+      "bytes": 216149
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/w3.png",
+      "sha256": "fde327eaac3d8f4cf3d689f26aa69c75c534559da5491e09987fac19ad18c339",
+      "bytes": 145619
+    },
+    {
+      "file": "public/images/tasblock/flexi-fit/wb.png",
+      "sha256": "34484996b6bb4e12f7340e68c6a816bb6ba41e081bbc5669522e78646f38a250",
+      "bytes": 163011
+    }
+  ]
+}
