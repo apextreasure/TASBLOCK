@@ -82,3 +82,11 @@ footer {
 }
 .flexi-fit-dialog::backdrop { background: rgb(0 0 0 / 80%); }
 body:has(.flexi-fit-dialog[open]) { overflow: hidden; }
+
+/* Natural-height columns remove padding caused by the tallest neighbouring card. */
+.portfolio-columns { columns: 1; column-gap: 1.5rem; }
+.portfolio-columns > article { break-inside: avoid; margin-bottom: 1.5rem; }
+@media (min-width: 768px) { .portfolio-columns { columns: 2; } }
+@media (min-width: 1024px) { .portfolio-columns { columns: 3; } }
+.evidence-demo figure { max-width: 160px; }
+.evidence-demo figure img, .evidence-demo figure video { width: 100%; max-height: 300px; object-fit: contain; }

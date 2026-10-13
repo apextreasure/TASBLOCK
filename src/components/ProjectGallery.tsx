@@ -1,10 +1,22 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Expand } from 'lucide-react';
 
 export default function ProjectGallery({ images, title }: { images: string[]; title: string }) {
   const [index, setIndex] = useState(0);
   const start = useRef<{x:number;y:number} | null>(null);
+  const strip = useRef<HTMLDivElement>(null);
   const urls = [...new Set(images)];
+  useEffect(() => {
+    const container = strip.current;
+    const selected = container?.children[index] as HTMLElement | undefined;
+    if (!container || !selected) return;
+    const left = selected.offsetLeft;
+    const margin = 16;
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+    if (left < container.scrollLeft + margin) container.scrollTo({left: Math.max(0, left - margin), behavior});
+    else if (left + selected.offsetWidth > container.scrollLeft + container.clientWidth - margin)
+      container.scrollTo({left: left + selected.offsetWidth - container.clientWidth + margin, behavior});
+  }, [index]);
   const change = (step: number) => setIndex(current => (current + step + urls.length) % urls.length);
   return <div className="min-w-0"><div role="region" aria-roledescription="carousel" aria-label={`Galeri ${title}`} tabIndex={0}
     onKeyDown={event => { if (urls.length > 1 && ['ArrowLeft','ArrowRight'].includes(event.key)) { event.preventDefault(); change(event.key === 'ArrowRight' ? 1 : -1); } }}
@@ -18,7 +30,7 @@ export default function ProjectGallery({ images, title }: { images: string[]; ti
   </div>
     {urls.length > 1 && <div className="border-t border-slate-700 bg-[#071827] px-3 py-3">
       <p className="mb-2 text-xs text-slate-300">{urls.length} foto / pelan · pilih gambar di bawah</p>
-      <div className="flex gap-2 overflow-x-auto pb-1" aria-label={`Pilih gambar: ${title}`}>
+      <div ref={strip} className="relative flex gap-2 overflow-x-auto overflow-y-hidden scroll-without-bar" aria-label={`Pilih gambar: ${title}`}>
         {urls.map((url,i)=><button key={url} type="button" aria-label={`Lihat foto ${i+1}: ${title}`} aria-pressed={index===i} onClick={()=>setIndex(i)} className={`relative h-14 w-20 shrink-0 overflow-hidden rounded-md border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9] ${index===i?'border-[#99D5D9]':'border-transparent hover:border-slate-400'}`}><img src={url} alt="" loading="lazy" className="h-full w-full object-cover"/><span className="absolute bottom-0 right-0 bg-[#071827]/90 px-1 text-[10px] text-white">{i+1}</span></button>)}
       </div>
     </div>}

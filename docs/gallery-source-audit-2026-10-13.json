@@ -1,0 +1,118 @@
+{
+  "source_images": [
+    {
+      "asset": "public\\images\\tasblock\\overseas-trabzon-1.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 18,
+      "image": "Image203.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-moscow-1.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 18,
+      "image": "Image204.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-villa-1.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 19,
+      "image": "Image209.jp2",
+      "browser_conversion": true
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-villa-2.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 19,
+      "image": "Image207.jp2",
+      "browser_conversion": true
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-villa-3.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 19,
+      "image": "Image211.jp2",
+      "browser_conversion": true
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-office-1.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 20,
+      "image": "Image220.jp2",
+      "browser_conversion": true
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-office-2.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 20,
+      "image": "Image216.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-office-3.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 20,
+      "image": "Image215.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-office-4.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 20,
+      "image": "Image217.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-office-5.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 20,
+      "image": "Image218.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-istanbul-office-6.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 20,
+      "image": "Image219.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-baghdad-1.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 21,
+      "image": "Image224.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-baghdad-2.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 21,
+      "image": "Image225.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-baghdad-3.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 21,
+      "image": "Image226.jpg",
+      "browser_conversion": false
+    },
+    {
+      "asset": "public\\images\\tasblock\\overseas-baghdad-4.jpg",
+      "source": "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+      "page": 21,
+      "image": "Image227.jpg",
+      "browser_conversion": false
+    }
+  ],
+  "lktn": "Four photo crops from image61.jpeg, slide27 Tasblock Global2025; no generated images.",
+  "dtact": "Two still images plus original media11.mp4, slide48.",
+  "overseas_countries": [
+    "T\u00fcrkiye",
+    "Russia",
+    "Iraq"
+  ],
+  "corrections": "Current CV page18 explicitly identifies Russia. Previous Moscow arched-window photograph is an Istanbul villa per page19. Current CV says Trabzon 3 storeys; earlier profile said2.",
+  "dtact_web_delivery": "Web MP4 transcoded H.264 CRF23 / AAC64k with faststart; original media11.mp4 retained unchanged. Full duration and audio retained."
+}
