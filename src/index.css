@@ -90,3 +90,6 @@ body:has(.flexi-fit-dialog[open]) { overflow: hidden; }
 @media (min-width: 1024px) { .portfolio-columns { columns: 3; } }
 .evidence-demo figure { max-width: 160px; }
 .evidence-demo figure img, .evidence-demo figure video { width: 100%; max-height: 300px; object-fit: contain; }
+
+.evidence-demo figure figcaption { display: none; }
+.evidence-demo .evidence-caption { white-space: nowrap; }

@@ -55,7 +55,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <li className="flex items-center gap-3"><Phone aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><a href={`tel:+${COMPANY_CONTACT.phoneRaw}`} className={linkStyle}>{COMPANY_CONTACT.phoneDisplay}</a></li>
               )}
               {COMPANY_CONTACT.whatsappBaseUrl.trim() && (
-                <li><a href={COMPANY_CONTACT.whatsappBaseUrl} target="_blank" rel="noopener noreferrer" className={`${linkStyle} text-[#99D5D9]`}>WhatsApp (tab baharu) ↗</a></li>
+                <li><a href={COMPANY_CONTACT.whatsappBaseUrl} target="_blank" rel="noopener noreferrer" className={`${linkStyle} text-[#99D5D9]`}>WhatsApp ↗</a></li>
               )}
               {COMPANY_CONTACT.email.trim() && (
                 <li className="flex items-center gap-3"><Mail aria-hidden="true" className="w-5 h-5 text-[#3EABB0] shrink-0" /><a href={`mailto:${COMPANY_CONTACT.email}`} className={`${linkStyle} min-w-0 break-all`}>{COMPANY_CONTACT.email}</a></li>

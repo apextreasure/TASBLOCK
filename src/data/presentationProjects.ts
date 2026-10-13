@@ -4,7 +4,7 @@ export const presentationProjects = [
     "title": "Banglo satu tingkat, Merbau Sempak",
     "year": "2024",
     "location": "Merbau Sempak",
-    "description": "Rujukan banglo satu tingkat dalam profil pengeluar.",
+    "description": "Banglo satu tingkat di Merbau Sempak, dibina pada 2024 dengan reka bentuk mengikut keperluan pemilik.",
     "images": [
       "merbau-sempak-bungalow-2024-exterior"
     ]
@@ -14,7 +14,7 @@ export const presentationProjects = [
     "title": "Banglo satu tingkat, Gombak",
     "year": "2021",
     "location": "Gombak",
-    "description": "Rujukan banglo satu tingkat dalam profil pengeluar.",
+    "description": "Banglo satu tingkat di Gombak dengan reka bentuk mengikut keperluan pemilik. Tahun 2021 mengikut pembentangan Global 2025; CV 2026 menyebut 2022.",
     "images": [
       "gombak-bungalow-2021-exterior"
     ]
@@ -24,7 +24,7 @@ export const presentationProjects = [
     "title": "Banglo dan homestay, Jempol",
     "year": "2023",
     "location": "Negeri Sembilan",
-    "description": "Bangunan satu setengah tingkat; profil menerangkan gabungan sistem Tasblock IBS dan papak konkrit bertetulang.",
+    "description": "Banglo dan homestay satu setengah tingkat di Jempol, Negeri Sembilan. Pembinaan menggabungkan sistem Tasblock IBS dengan papak konkrit bertetulang.",
     "images": [
       "jempol-homestay-2023-exterior"
     ]
@@ -34,7 +34,7 @@ export const presentationProjects = [
     "title": "Banglo dengan aras bawah, Lenggeng",
     "year": "2018",
     "location": "Negeri Sembilan",
-    "description": "Banglo dengan aras bawah, menggunakan gabungan Tasblock IBS dan papak konkrit bertetulang menurut profil pengeluar.",
+    "description": "Banglo dengan aras bawah di Lenggeng, Negeri Sembilan, dibina pada 2018 menggunakan gabungan Tasblock IBS dan papak konkrit bertetulang.",
     "images": [
       "lenggeng-bungalow-basement-2018-exterior"
     ]
@@ -44,7 +44,7 @@ export const presentationProjects = [
     "title": "Tambahan tingkat, Kelana Jaya",
     "year": "2019",
     "location": "Kelana Jaya",
-    "description": "Tambahan 740 kaki persegi, termasuk pemindahan tandas. Profil menyatakan penyerahan dalam 26 hari bekerja bagi kes ini.",
+    "description": "Tambahan tingkat seluas 740 kaki persegi di Kelana Jaya, termasuk pemindahan tandas. Penyerahan projek pada 2019 mengambil 26 hari bekerja.",
     "images": [
       "kelana-jaya-extension-2019-wall-work",
       "kelana-jaya-extension-2019-interior"
@@ -55,7 +55,7 @@ export const presentationProjects = [
     "title": "Tambahan tingkat, Sepang",
     "year": "2019",
     "location": "Sepang",
-    "description": "Tambahan bilik tingkat atas, 1,700 kaki persegi. Profil menyatakan penyerahan dalam 24 hari bagi kes ini.",
+    "description": "Tambahan bilik di tingkat atas seluas 1,700 kaki persegi di Sepang. Penyerahan projek pada 2019 mengambil 24 hari.",
     "images": [
       "sepang-extension-2019-interior-work"
     ]
@@ -65,7 +65,7 @@ export const presentationProjects = [
     "title": "Pengubahsuaian rumah, Putra Heights",
     "year": "2022",
     "location": "Putra Heights",
-    "description": "Skop 2,500 kaki persegi merangkumi tambahan bilik tingkat atas, cat luaran dan pengubahsuaian. Profil menyatakan penyerahan dalam 3 bulan.",
+    "description": "Pengubahsuaian rumah seluas 2,500 kaki persegi pada 2022, merangkumi tambahan bilik tingkat atas, cat semula luaran dan pembaikan ruang sedia ada. Kerja berlangsung selama 3 bulan ketika pemilik masih tinggal di rumah.",
     "images": [
       "putra-heights-renovation-2022-exterior-work",
       "putra-heights-renovation-2022-upper-floor",
@@ -77,7 +77,7 @@ export const presentationProjects = [
     "title": "Sambungan surau SMK Saujana Impian",
     "year": "2021",
     "location": "Kajang",
-    "description": "Sambungan 2,754 kaki persegi pada struktur konkrit bertetulang sedia ada. Profil menyatakan penyerahan dalam 3 bulan.",
+    "description": "Sambungan surau seluas 2,754 kaki persegi di SMK Saujana Impian, Kajang, pada 2021. Struktur baharu disambungkan kepada struktur konkrit bertetulang sedia ada; penyerahan mengambil 3 bulan.",
     "images": [
       "saujana-impian-surau-2021-completed-interior",
       "saujana-impian-surau-2021-design-render",
@@ -90,7 +90,7 @@ export const presentationProjects = [
     "title": "Struktur terapung SEAPLAST",
     "year": "2023",
     "location": "Muara Kuala Perlis",
-    "description": "Profil pengeluar menerangkan penggunaan semula komponen bagi aplikasi Agensi Nuklear Malaysia. Penggunaan semula bergantung pada keadaan komponen dan kesesuaian aplikasi.",
+    "description": "Struktur terapung untuk mini kilang SEAPLAST oleh Agensi Nuklear Malaysia di Muara Kuala Perlis pada 2023. Komponen digunakan semula dan pemasangan mengambil 1 hari oleh 2 pekerja.",
     "images": [
       "seaplast-kuala-perlis-2023-floating-overview",
       "seaplast-kuala-perlis-2023-reused-components"
