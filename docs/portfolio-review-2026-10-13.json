@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-13",
+  "sources": [
+    "Owner-provided project-name correction",
+    "Tasblock Global 2025 slide records and original images retained in workspace",
+    "Tasblock (M) Sdn Bhd CV - 2026.pdf",
+    "Tasblock (M) Sdn Bhd - Presentation by JD dd 23.01.2018.pdf",
+    "https://sites.google.com/view/tasblockbuilder/projects-portfolio"
+  ],
+  "updated_cases": {
+    "demo-2016": {
+      "title": "Rumah Contoh 2 tingkat",
+      "evidence": "Owner correction; finished two-storey house in slide 36 image95.jpeg. Construction photo retained as second image. Source says installation, not complete turnkey delivery."
+    },
+    "schools-2017": {
+      "title": "Projek tambahan 34 kelas sekolah — pakej Melaka, 2017",
+      "evidence": "Slides 37–38, CV pages14–15, 2018 presentation page2: four schools, 34 classrooms, four toilet blocks. Includes SK and SJK(C), not exclusively SK."
+    },
+    "felda-hostel": {
+      "title": "Asrama pekerja ladang Felda",
+      "evidence": "Owner wording; slide45 and CV page17 identify six FELDA hostels supplied/installed under KPF Agro."
+    }
+  },
+  "source_conflicts": [
+    {
+      "item": "Melaka package number",
+      "conflict": "2018 document: Pakej2; 2026 CV: Package4. No package number published."
+    },
+    {
+      "item": "TB01 storeys",
+      "conflict": "Original title 2 storey; prose1.5storey. No definitive storey count published for TB01."
+    },
+    {
+      "item": "TB02 area",
+      "conflict": "Original text680sqft; rendered caption620sqft. Both flagged, no confirmed area inferred."
+    },
+    {
+      "item": "Showhouse manpower",
+      "conflict": "Slide36/CV16 say4+1; prior owner correction3+1. Headcount omitted from current card."
+    },
+    {
+      "item": "Gombak year",
+      "conflict": "2025 slide42 says2021; later CV16 says2022. Current card preserves2025 source year, revision conflict retained here."
+    },
+    {
+      "item": "Moscow country",
+      "conflict": "Prior reference labels Moscow under Türkiye heading. Existing uncertainty retained; no country inferred."
+    }
+  ],
+  "restored_images": {
+    "original_concepts": 36,
+    "concept_counts": [
+      9,
+      4,
+      14,
+      3,
+      3,
+      3
+    ],
+    "additional_manufacturer_photos": [
+      "image96.jpeg: ICW bus stand",
+      "image131.png: D-TACT construction"
+    ]
+  },
+  "gallery_change": "Visible thumbnails expose every existing gallery image; project sources are kept separate from concept designs."
+}

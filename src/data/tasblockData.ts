@@ -65,23 +65,23 @@ export const PROJECTS_DATA: ProjectItem[] = [];
 // Photographs extracted from the supplied corporate profile; see public/images/manufacturer-gallery-provenance.md.
 export const MANUFACTURER_CASES = [
   {
-    id: 'demo-2016', year: '2016', title: 'Demonstrasi dinding & komponen struktur', source: 'Profil Tasblock (M) Sdn. Bhd.',
+    id: 'demo-2016', year: '2016', title: 'Rumah Contoh 2 tingkat', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-demo-construction.jpeg', width: 536, height: 349, alt: 'Pemasangan komponen struktur rumah demonstrasi pengeluar', caption: 'Pemasangan rumah demonstrasi 2016', page: 14, position: 'center' },
-    description: 'Profil Tasblock (M) Sdn. Bhd. merekodkan pemasangan dinding dan komponen struktur dalam empat hari bekerja oleh tiga pekerja dan seorang penyelia.',
-    facts: ['4 hari bekerja', '3 pekerja', '1 penyelia'],
+    description: 'Rumah contoh Tasblock dua tingkat ditunjukkan dalam portfolio pengeluar tahun 2016. Galeri merangkumi bangunan siap dan pemasangan komponen struktur; pemasangan dilaporkan mengambil empat hari bekerja.',
+    facts: ['2 tingkat', '2016', '4 hari pemasangan mengikut skop'],
     caveat: 'Rekod demonstrasi khusus, bukan tempoh menyiapkan sebuah rumah lengkap. Keputusan ini tidak menjamin tempoh atau keperluan tenaga kerja projek lain.'
   },
   {
-    id: 'schools-2017', year: '2017', title: 'Pakej kemudahan pendidikan', source: 'Profil Tasblock (M) Sdn. Bhd.',
+    id: 'schools-2017', year: '2017', title: 'Projek tambahan 34 kelas sekolah — pakej Melaka, 2017', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-school.webp', width: 444, height: 262, alt: 'Bangunan SJKC Yu Ying dalam profil pengeluar', caption: 'SJKC Yu Ying, petikan CIDB IBS Coffee Table Book dalam profil pengeluar', page: 15, position: 'center' },
-    description: 'Profil Tasblock (M) Sdn. Bhd. merekodkan pakej empat sekolah yang merangkumi 34 bilik darjah dan empat blok tandas dalam tempoh lima bulan.',
+    description: 'Projek tahun 2017 di Melaka merangkumi 34 bilik darjah dan empat blok tandas untuk SK Ayer Merbau, SK Kerubong, SK Sg Tuang dan SJK(C) Yu Ying. Portfolio pengeluar melaporkan penyiapan pakej dalam lima bulan.',
     facts: ['4 sekolah', '34 bilik darjah', '4 blok tandas', '5 bulan'],
     caveat: 'Tempoh merujuk kepada pakej yang dilaporkan dalam profil pengeluar. Ia bukan tempoh setiap sekolah dan tidak boleh digunakan sebagai janji bagi projek baharu.'
   },
   {
-    id: 'felda-hostel', year: null, title: 'Asrama FELDA untuk KPF Agro', source: 'Profil Tasblock (M) Sdn. Bhd.',
+    id: 'felda-hostel', year: null, title: 'Asrama pekerja ladang Felda', source: 'Profil Tasblock (M) Sdn. Bhd.',
     image: { src: '/images/manufacturer-felda-hostel.jpeg', width: 343, height: 278, alt: 'Bangunan asrama dalam rekod FELDA pengeluar', caption: 'Rujukan asrama FELDA / KPF Agro', page: 18, position: 'center' },
-    description: 'Profil pengeluar merekodkan enam blok asrama untuk KPF Agro. Lokasi yang disenaraikan termasuk Kg Awah, Raja Alias 2, Jenderak Utara, Triang dan Bukit Tongkat.',
+    description: 'Asrama pekerja ladang FELDA: profil pengeluar merekodkan bekalan dan pemasangan enam blok asrama di bawah KPF Agro. Lokasi yang disenaraikan termasuk Kg Awah, Raja Alias 2, Jenderak Utara, Triang dan Bukit Tongkat.',
     facts: ['6 blok asrama', 'KPF Agro', '4 hari pemasangan struktur mengikut skop'],
     caveat: 'Empat hari yang dilaporkan merujuk pemasangan struktur bagi satu blok penginapan dan blok tandas di setiap lokasi, bukan keseluruhan kerja siap. Lokasi khusus foto ini tidak dinyatakan.'
   },

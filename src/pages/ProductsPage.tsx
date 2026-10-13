@@ -5,7 +5,6 @@ import { PageType } from '../types';
 import { PRODUCTS_DATA, COMPANY_CONTACT } from '../data/tasblockData';
 import { Layers, MessageCircle } from 'lucide-react';
 import { Photo, VideoSection } from '../components/PresentationMedia';
-import { CompositeMaterials } from '../components/PresentationContent';
 import PageContents, { SectionLabel } from '../components/PageContents';
 export default function ProductsPage({onNavigate}:{onNavigate:(page:PageType)=>void}) {
 return <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y-12">
@@ -14,7 +13,6 @@ return <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y
  <VideoSection />
 
  <ComponentCatalogue/>
- <div id="materials" tabIndex={-1} className="scroll-mt-36"><SectionLabel id="materials"/><CompositeMaterials /></div>
  <VideoSection index={1}/><VideoSection index={2}/>
  <TechnicalEvidence />
  <SystemComparison />

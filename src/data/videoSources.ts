@@ -12,6 +12,7 @@ export const hostedVideos: Record<string, string> = {
 };
 
 export function videoSource(file: string): string {
+  if (['anchor-pull-demonstration.mp4','sound-insulation-demonstration.mp4'].includes(file)) return `/videos/tasblock/${file}`;
   const base = (import.meta.env.VITE_TASBLOCK_VIDEO_BASE_URL || '').replace(/\/+$/, '');
   if (base) return `${base}/${file}`;
   if (hostedVideos[file]) return hostedVideos[file];

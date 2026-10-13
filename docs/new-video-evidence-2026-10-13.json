@@ -1,0 +1,18 @@
+[
+  {
+    "file": "public/videos/tasblock/anchor-pull-demonstration.mp4",
+    "owner_source": "snaptik_7364329709586386183_v3.mp4",
+    "duration_seconds": 81.5,
+    "bytes": 4407517,
+    "sha256": "4e0f6b57d84c58ba524cd8d4bade9106e030c74980590d4ff1b441bf8a2f7807",
+    "interpretation": "Field demonstration; not verified load/acoustic rating. Audio preserved."
+  },
+  {
+    "file": "public/videos/tasblock/sound-insulation-demonstration.mp4",
+    "owner_source": "snaptik_7569823604603489543_v3.mp4",
+    "duration_seconds": 163.967,
+    "bytes": 10453451,
+    "sha256": "1efcb4b32afad0ac829181187dea046dfa6d8e20bc4073999bd0aba2083887bc",
+    "interpretation": "Field demonstration; not verified load/acoustic rating. Audio preserved."
+  }
+]

@@ -6,7 +6,7 @@ export default function ProjectGallery({ images, title }: { images: string[]; ti
   const start = useRef<{x:number;y:number} | null>(null);
   const urls = [...new Set(images)];
   const change = (step: number) => setIndex(current => (current + step + urls.length) % urls.length);
-  return <div role="region" aria-roledescription="carousel" aria-label={`Galeri ${title}`} tabIndex={0}
+  return <div className="min-w-0"><div role="region" aria-roledescription="carousel" aria-label={`Galeri ${title}`} tabIndex={0}
     onKeyDown={event => { if (urls.length > 1 && ['ArrowLeft','ArrowRight'].includes(event.key)) { event.preventDefault(); change(event.key === 'ArrowRight' ? 1 : -1); } }}
     onTouchStart={event => { const touch=event.touches[0]; start.current={x:touch.clientX,y:touch.clientY}; }}
     onTouchEnd={event => { const touch=event.changedTouches[0]; if (start.current && urls.length > 1) { const dx=touch.clientX-start.current.x; const dy=touch.clientY-start.current.y; if (Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy)) change(dx<0?1:-1); } start.current=null; }}
@@ -15,5 +15,12 @@ export default function ProjectGallery({ images, title }: { images: string[]; ti
     {urls.length>1 && <><button type="button" onClick={()=>change(-1)} aria-label={`Foto sebelumnya: ${title}`} className="gallery-control absolute left-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-[#071827]/85 text-white shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9]"><ChevronLeft aria-hidden="true" size={22}/></button><button type="button" onClick={()=>change(1)} aria-label={`Foto seterusnya: ${title}`} className="gallery-control absolute right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-[#071827]/85 text-white shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9]"><ChevronRight aria-hidden="true" size={22}/></button></>}
     <span aria-live="polite" aria-atomic="true" className="absolute bottom-3 left-3 rounded-full bg-[#071827]/85 px-3 py-1 text-xs font-semibold text-white">{index+1} / {urls.length}</span>
     <a href={urls[index]} target="_blank" rel="noopener noreferrer" aria-label={`Buka foto ${index+1} ${title} dalam saiz penuh`} className="gallery-control absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#071827]/85 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9]"><Expand size={17} aria-hidden="true"/></a>
+  </div>
+    {urls.length > 1 && <div className="border-t border-slate-700 bg-[#071827] px-3 py-3">
+      <p className="mb-2 text-xs text-slate-300">{urls.length} foto / pelan · pilih gambar di bawah</p>
+      <div className="flex gap-2 overflow-x-auto pb-1" aria-label={`Pilih gambar: ${title}`}>
+        {urls.map((url,i)=><button key={url} type="button" aria-label={`Lihat foto ${i+1}: ${title}`} aria-pressed={index===i} onClick={()=>setIndex(i)} className={`relative h-14 w-20 shrink-0 overflow-hidden rounded-md border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9] ${index===i?'border-[#99D5D9]':'border-transparent hover:border-slate-400'}`}><img src={url} alt="" loading="lazy" className="h-full w-full object-cover"/><span className="absolute bottom-0 right-0 bg-[#071827]/90 px-1 text-[10px] text-white">{i+1}</span></button>)}
+      </div>
+    </div>}
   </div>;
 }
