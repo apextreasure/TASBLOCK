@@ -93,3 +93,16 @@ body:has(.flexi-fit-dialog[open]) { overflow: hidden; }
 
 .evidence-demo figure figcaption { display: none; }
 .evidence-demo .evidence-caption { white-space: nowrap; }
+
+.project-image-dialog {
+  width: min(1100px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #475569;
+  border-radius: 16px;
+  background: #071827;
+}
+.project-image-dialog::backdrop { background: rgb(0 0 0 / 85%); }
+body:has(.project-image-dialog[open]) { overflow: hidden; }
