@@ -29,7 +29,6 @@ export default function ProjectGallery({ images, title }: { images: string[]; ti
     <a href={urls[index]} target="_blank" rel="noopener noreferrer" aria-label={`Buka foto ${index+1} ${title} dalam saiz penuh`} className="gallery-control absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#071827]/85 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9]"><Expand size={17} aria-hidden="true"/></a>
   </div>
     {urls.length > 1 && <div className="border-t border-slate-700 bg-[#071827] px-3 py-3">
-      <p className="mb-2 text-xs text-slate-300">{urls.length} foto / pelan · pilih gambar di bawah</p>
       <div ref={strip} className="relative flex gap-2 overflow-x-auto overflow-y-hidden scroll-without-bar" aria-label={`Pilih gambar: ${title}`}>
         {urls.map((url,i)=><button key={url} type="button" aria-label={`Lihat foto ${i+1}: ${title}`} aria-pressed={index===i} onClick={()=>setIndex(i)} className={`relative h-14 w-20 shrink-0 overflow-hidden rounded-md border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#99D5D9] ${index===i?'border-[#99D5D9]':'border-transparent hover:border-slate-400'}`}><img src={url} alt="" loading="lazy" className="h-full w-full object-cover"/><span className="absolute bottom-0 right-0 bg-[#071827]/90 px-1 text-[10px] text-white">{i+1}</span></button>)}
       </div>
