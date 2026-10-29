@@ -1,4 +1,5 @@
 import { PageType } from '../types';
+import {pagePath,servicePath} from '../seo';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_CONTACT, SERVICES_DATA } from '../data/tasblockData';
 
@@ -38,14 +39,14 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h2 className="text-xl font-bold text-white mb-3">Perkhidmatan</h2>
             <ul className="text-sm">
               {SERVICES_DATA.map(service => (
-                <li key={service.id}><button onClick={() => { if (service.id === 'training') handleLink('training'); else { window.location.hash = `services?service=${encodeURIComponent(service.id)}`; window.scrollTo({ top: 0 }); } }} className={linkStyle}>{service.title}</button></li>
+                <li key={service.id}><a href={servicePath(service.id)} className={linkStyle}>{service.title}</a></li>
               ))}
             </ul>
           </nav>
 
           <nav aria-label="Pautan di pengaki" className="min-w-0">
             <h2 className="text-xl font-bold text-white mb-3">Pautan Pantas</h2>
-            <ul className="text-sm">{quickLinks.map(link => <li key={link.page}><button onClick={() => handleLink(link.page)} className={linkStyle}>{link.label}</button></li>)}</ul>
+            <ul className="text-sm">{quickLinks.map(link => <li key={link.page}><a href={pagePath(link.page)} className={linkStyle}>{link.label}</a></li>)}</ul>
           </nav>
 
           <div className="min-w-0">

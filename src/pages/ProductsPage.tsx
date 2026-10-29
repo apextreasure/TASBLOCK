@@ -8,7 +8,7 @@ import { Photo, VideoSection } from '../components/PresentationMedia';
 import PageContents, { SectionLabel } from '../components/PageContents';
 export default function ProductsPage({onNavigate}:{onNavigate:(page:PageType)=>void}) {
 return <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y-12">
- <header className="max-w-3xl space-y-4"><p className="text-sm text-[#99D5D9] font-semibold">KENALI TASBLOCK</p><h1 className="text-3xl sm:text-5xl font-bold text-white">Sistem, bahan & cara pemasangan</h1><p className="text-slate-300 leading-relaxed">Mulakan dengan gambaran sistem, kenali komponennya, kemudian lihat demonstrasi pemasangan dan pembongkaran. Maklumat teknikal terperinci berada di bahagian akhir.</p></header>
+ <header className="max-w-3xl space-y-4"><p className="text-sm text-[#99D5D9] font-semibold">KENALI TASBLOCK</p><h1 className="text-3xl sm:text-5xl font-bold text-white">Sistem IBS Tasblock & Cara Pemasangan</h1><p className="text-slate-300 leading-relaxed">Mulakan dengan gambaran sistem, kenali komponennya, kemudian lihat demonstrasi pemasangan dan pembongkaran. Maklumat teknikal terperinci berada di bahagian akhir.</p></header>
  <PageContents/>
  <VideoSection />
 

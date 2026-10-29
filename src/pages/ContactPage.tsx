@@ -18,6 +18,7 @@ export default function ContactPage({ onNavigate: _onNavigate }: { onNavigate: (
         </div>
         <p className="text-sm text-slate-300">Gunakan borang di bawah untuk menyediakan ringkasan projek. Membuka WhatsApp tidak menghantar mesej secara automatik.</p>
       </section>
+      <section className="max-w-5xl mx-auto rounded-2xl border border-slate-700 p-6 space-y-4"><h2 className="text-2xl font-bold text-white">Alamat & lawatan di Rawang</h2><address className="not-italic text-slate-300">{COMPANY_CONTACT.address}</address><p className="text-slate-300">Pelanggan boleh berkunjung. Hubungi kami untuk mengatur masa lawatan. Pertanyaan projek dari seluruh Malaysia dan eksport komponen antarabangsa diterima; skop serta logistik disemak mengikut projek.</p><a href="https://www.google.com/maps/search/?api=1&query=No.22A%20Jalan%20Kesidang%201%2048000%20Rawang%20Malaysia" target="_blank" rel="noopener noreferrer" className="inline-block text-[#99D5D9] underline underline-offset-4">Cari alamat di Google Maps →</a></section>
       <ProjectEnquiry />
       <section className="max-w-5xl mx-auto space-y-5" aria-labelledby="contact-faq-title">
         <h2 id="contact-faq-title" className="text-2xl font-bold text-white font-heading">Soalan lazim</h2>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { PageType } from '../types';
+import {pagePath} from '../seo';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
@@ -14,6 +15,7 @@ const navItems: { page: PageType; label: string }[] = [
   { page: 'products', label: 'Sistem Tasblock' },
   { page: 'projects', label: 'Rujukan Projek' },
   { page: 'training', label: 'Latihan' },
+  { page: 'export', label: 'Eksport' },
   { page: 'enquiry', label: 'Pertanyaan Projek' },
   { page: 'contact', label: 'Hubungi' },
 ];
@@ -60,13 +62,13 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   };
 
   const navButton = (item: typeof navItems[number], mobile = false) => (
-    <button key={item.page} onClick={() => handleNavigate(item.page)}
+    <a key={item.page} href={pagePath(item.page)} onClick={event => { if(!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey){event.preventDefault();handleNavigate(item.page);} }}
       aria-current={currentPage === item.page ? 'page' : undefined}
       className={`${mobile ? 'w-full text-left px-4 text-lg' : 'px-3 text-lg whitespace-nowrap'} min-h-12 py-3 rounded-lg font-semibold ${focusStyle} ${
         currentPage === item.page ? 'bg-[#245D98]/40 text-[#99D5D9]' : item.page === 'enquiry' ? 'bg-[#3EABB0] text-[#071827] hover:bg-[#99D5D9]' : 'text-slate-200 hover:bg-slate-800 hover:text-white'
       }`}>
       {item.label}
-    </button>
+    </a>
   );
 
   return (
@@ -76,13 +78,13 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       }}>
       <div className="bg-[#102c46] px-4 py-2 text-center text-base text-slate-200">Teknologi komposit Tasblock untuk kontraktor tempatan & projek individu</div>
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 min-h-20">
-        <button onClick={() => handleNavigate('home')} aria-label="Tasblock Builder — Laman Utama" className={`flex items-center gap-3 text-left shrink-0 py-2 rounded-lg ${focusStyle}`}>
+        <a href="/" onClick={event=>{event.preventDefault();handleNavigate('home');}} aria-label="Tasblock Builder — Laman Utama" className={`flex items-center gap-3 text-left shrink-0 py-2 rounded-lg ${focusStyle}`}>
           <img src="/images/tasblock-symbol.png" alt="" width="58" height="72" className="h-16 w-auto object-contain" />
           <span className="flex flex-col leading-tight text-white">
             <span className="text-2xl font-bold tracking-tight">tasblock</span>
             <span className="text-sm font-semibold tracking-[0.2em]">BUILDER</span>
           </span>
-        </button>
+        </a>
         <nav aria-label="Navigasi utama" className="hidden 2xl:flex flex-1 justify-center items-center gap-3">{navItems.filter(item => item.page !== 'enquiry' && item.page !== 'contact').map(item => navButton(item))}</nav>
         <nav aria-label="Tindakan projek" className="hidden 2xl:flex shrink-0 items-center gap-3">{navItems.filter(item => item.page === 'enquiry' || item.page === 'contact').map(item => navButton(item))}</nav>
         <button ref={toggleRef} onClick={() => setMobileMenuOpen(open => !open)} aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation" aria-label={mobileMenuOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'} className={`2xl:hidden min-h-12 min-w-12 flex items-center justify-center rounded-lg border border-slate-600 text-slate-200 hover:bg-slate-800 ${focusStyle}`}>

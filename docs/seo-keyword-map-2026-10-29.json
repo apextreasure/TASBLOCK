@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-29",
+  "method": "Qualitative research of Malaysian IBS query wording, primary CIDB terminology, existing supplied business evidence and search results; no measured search volumes or ranking guarantees.",
+  "routes": [
+    {
+      "path": "/",
+      "page": "home",
+      "title": "Tasblock Builder | Rumah IBS, Bekalan & Pemasangan di Malaysia",
+      "description": "Tasblock Builder di Rawang: reka & bina rumah IBS, bekalan komponen dan bekal pasang Tasblock. Pertanyaan projek seluruh Malaysia dan eksport komponen.",
+      "keywords": [
+        "Tasblock Builder",
+        "rumah IBS Malaysia",
+        "kontraktor IBS Rawang",
+        "bina rumah IBS"
+      ]
+    },
+    {
+      "path": "/mengenai-kami/",
+      "page": "about",
+      "title": "Mengenai Tasblock Builder | Sokongan Sistem IBS di Rawang",
+      "description": "Kenali Tasblock Builder di Rawang dan peranannya dalam reka bina, bekalan komponen, pemasangan dan minat latihan sistem IBS Tasblock.",
+      "keywords": [
+        "Tasblock Builder Rawang",
+        "syarikat IBS Rawang",
+        "Tasblock Malaysia"
+      ]
+    },
+    {
+      "path": "/perkhidmatan/",
+      "page": "services",
+      "title": "Perkhidmatan IBS Tasblock | Reka Bina, Bekalan & Pemasangan",
+      "description": "Pilih reka & bina, pembekalan komponen atau bekal & pasang sistem IBS Tasblock. Bincangkan pelan, lokasi dan skop projek anda.",
+      "keywords": [
+        "perkhidmatan IBS",
+        "kontraktor bina rumah IBS",
+        "bekal pasang IBS"
+      ]
+    },
+    {
+      "path": "/perkhidmatan/reka-bina/",
+      "page": "services",
+      "service": "design-build",
+      "title": "Reka & Bina Rumah IBS | Tasblock Builder Malaysia",
+      "description": "Bincangkan reka & bina rumah menggunakan sistem IBS Tasblock. Semakan bermula dengan pelan, lokasi, keadaan tapak dan skop pembinaan.",
+      "keywords": [
+        "reka bina rumah IBS",
+        "kontraktor bina rumah IBS",
+        "bina rumah atas tanah sendiri IBS"
+      ]
+    },
+    {
+      "path": "/perkhidmatan/bekalan-komponen/",
+      "page": "services",
+      "service": "supply",
+      "title": "Pembekalan Komponen IBS Tasblock | Panel, Adaptor & Rasuk",
+      "description": "Pertanyaan bekalan panel dinding, adaptor dan komponen IBS Tasblock untuk kontraktor dan pemilik projek. Kuantiti dan penghantaran mengikut semakan pelan.",
+      "keywords": [
+        "pembekal komponen IBS",
+        "pembekal panel dinding IBS",
+        "Tasblock wall panel supplier",
+        "adaptor Tasblock"
+      ]
+    },
+    {
+      "path": "/perkhidmatan/bekal-pasang/",
+      "page": "services",
+      "service": "supply-install",
+      "title": "Bekal & Pasang Sistem IBS Tasblock | Pertanyaan Projek",
+      "description": "Bincangkan bekalan komponen dan pemasangan sistem IBS Tasblock di tapak. Skop kerja, kesiapsiagaan tapak dan jadual ditentukan mengikut projek.",
+      "keywords": [
+        "bekal pasang IBS",
+        "pemasangan panel dinding IBS",
+        "kontraktor pemasangan Tasblock"
+      ]
+    },
+    {
+      "path": "/sistem-tasblock/",
+      "page": "products",
+      "title": "Sistem IBS Tasblock Flexi-fit | Komponen & Cara Pemasangan",
+      "description": "Kenali panel dinding, adaptor, interlocking dan pemasangan sistem IBS Tasblock Flexi-fit. Lihat komponen, demonstrasi dan maklumat teknikal.",
+      "keywords": [
+        "sistem IBS Tasblock",
+        "Tasblock Flexi-fit",
+        "panel dinding komposit",
+        "interlocking wall panel",
+        "komponen IBS"
+      ]
+    },
+    {
+      "path": "/rujukan-projek/",
+      "page": "projects",
+      "title": "Rujukan Projek IBS Tasblock | Rumah, Sekolah & Asrama",
+      "description": "Lihat foto rujukan projek Tasblock: rumah, sekolah, asrama dan projek luar negara. Konsep rumah TB01–TB06 dipaparkan berasingan daripada projek binaan.",
+      "keywords": [
+        "projek rumah IBS",
+        "contoh rumah Tasblock",
+        "projek sekolah IBS",
+        "asrama IBS",
+        "konsep rumah IBS"
+      ]
+    },
+    {
+      "path": "/latihan/",
+      "page": "training",
+      "title": "Minat Latihan Pemasangan IBS Tasblock | Tasblock Builder",
+      "description": "Daftar minat latihan pemasangan sistem IBS Tasblock. Nyatakan pengalaman dan lokasi; jadual, yuran dan pelaksanaan tertakluk kepada pengesahan.",
+      "keywords": [
+        "latihan pemasangan IBS",
+        "latihan Tasblock",
+        "kursus pemasangan panel IBS"
+      ]
+    },
+    {
+      "path": "/eksport-komponen-ibs/",
+      "page": "export",
+      "title": "IBS Wall Panel Supplier & Export Enquiries | Tasblock Builder",
+      "description": "Pertanyaan eksport komponen IBS Tasblock dari Malaysia. Bincangkan panel, adaptor, kuantiti, negara destinasi dan keperluan dokumen serta logistik.",
+      "keywords": [
+        "IBS wall panel supplier Malaysia",
+        "Tasblock export",
+        "composite wall panel export",
+        "interlocking wall panel supplier"
+      ]
+    },
+    {
+      "path": "/pertanyaan-projek/",
+      "page": "enquiry",
+      "title": "Sebut Harga & Pertanyaan Projek IBS | Tasblock Builder",
+      "description": "Minta perbincangan sebut harga sistem IBS Tasblock. Kongsikan lokasi, pelan, keperluan komponen dan skop reka bina atau pemasangan melalui WhatsApp.",
+      "keywords": [
+        "sebut harga IBS",
+        "harga panel Tasblock",
+        "kos bina rumah IBS",
+        "quotation IBS Malaysia"
+      ]
+    },
+    {
+      "path": "/hubungi/",
+      "page": "contact",
+      "title": "Hubungi Tasblock Builder | Rawang, Selangor & Malaysia",
+      "description": "Hubungi Tasblock Builder di No.22A, Jalan Kesidang 1, 48000 Rawang. Telefon +60 13-274 4018 untuk projek IBS Malaysia dan pertanyaan eksport.",
+      "keywords": [
+        "Tasblock Builder contact",
+        "Tasblock Rawang",
+        "kontraktor IBS Selangor",
+        "alamat Tasblock Builder"
+      ]
+    }
+  ]
+}

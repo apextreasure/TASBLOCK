@@ -12,14 +12,16 @@ function serviceFromUrl() {
 // Legacy filename/default export retained for existing consumers.
 export default function ProjectEnquiry() {
   const id = useId();
-  const [fields, setFields] = useState({ name: '', location: '', service: serviceFromUrl(), description: '' });
+  const [fields, setFields] = useState({ name: '', location: '', service: '', description: '' });
   const [preview, setPreview] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
   useEffect(() => {
     const sync = () => { setFields(previous => ({ ...previous, service: serviceFromUrl() })); setPreview(''); setErrors({}); };
+    sync();
+    window.addEventListener('tasblock:navigate', sync);
     window.addEventListener('hashchange', sync);
     window.addEventListener('popstate', sync);
-    return () => { window.removeEventListener('hashchange', sync); window.removeEventListener('popstate', sync); };
+    return () => { window.removeEventListener('tasblock:navigate', sync); window.removeEventListener('hashchange', sync); window.removeEventListener('popstate', sync); };
   }, []);
   const edit = (key: keyof typeof fields, value: string) => {
     setFields(previous => ({ ...previous, [key]: value }));

@@ -7,7 +7,8 @@ export type PageType =
   | 'projects' 
   | 'training' 
   | 'about' 
-  | 'contact';
+  | 'contact'
+  | 'export';
 
 export interface ServiceItem {
   id: string;
