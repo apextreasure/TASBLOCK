@@ -1,3 +1,3 @@
 // GA4 Measurement IDs are public identifiers, not account passwords or API keys.
-// Keep empty until the owner supplies the web stream's real G- ID.
-export const ga4MeasurementId = '';
+// Owner-provided Tasblock Builder web-stream ID.
+export const ga4MeasurementId = 'G-X08B7GCH2B';

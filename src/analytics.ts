@@ -56,7 +56,9 @@ export function trackAnalyticsEvent(name:EventName,service?:string){
  if(!measurementId || !started || analyticsConsent()!=='granted')return;
  const params:Record<string,string>={send_to:measurementId,page_path:window.location.pathname,page_location:cleanAnalyticsUrl(window.location.href,true)};
  if(service && ['design-build','supply','supply-install','training'].includes(service))params.service_id=service;
- // Never attach link URLs, names, locations, enquiry text or WhatsApp message bodies.
+ // Only send the public business contact URL, never a WhatsApp draft query string.
+ if(name==='whatsapp_click'){params.link_url='https://wa.me/60132744150';params.link_domain='wa.me';}
+ // Never attach names, user locations, enquiry text or WhatsApp message bodies.
  window.gtag?.('event',name,params);
 }
 export function trackContactClick(event:MouseEvent){

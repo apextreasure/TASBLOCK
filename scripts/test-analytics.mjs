@@ -6,7 +6,7 @@ import {pathToFileURL} from 'node:url';
 const root=process.cwd(),temp=path.resolve(root,'.analytics-check');
 assert.ok(temp.startsWith(path.resolve(root)+path.sep));
 async function load(id,name){
- await build({configFile:false,define:{'import.meta.env.VITE_GA4_MEASUREMENT_ID':JSON.stringify(id)},build:{ssr:'src/analytics.ts',outDir:temp,emptyOutDir:false,rollupOptions:{output:{entryFileNames:name+'.mjs'}}}});
+ await build({configFile:false,plugins:[{name:'isolated-test-config',transform(code,file){if(file.replaceAll('\\','/').endsWith('/src/data/analyticsConfig.ts'))return "export const ga4MeasurementId='';";}}],define:{'import.meta.env.VITE_GA4_MEASUREMENT_ID':JSON.stringify(id)},build:{ssr:'src/analytics.ts',outDir:temp,emptyOutDir:false,rollupOptions:{output:{entryFileNames:name+'.mjs'}}}});
  return import(pathToFileURL(path.join(temp,name+'.mjs')).href);
 }
 const scripts=[],store=new Map();
@@ -23,7 +23,10 @@ try {
  assert.equal(events().filter(x=>x[1]==='page_view').length,1,'One initial page view');
  window.location.pathname='/sistem-tasblock/';window.location.href='https://www.tasblockbuilder.com/sistem-tasblock/?name=PRIVATE_NAME';a.trackPageView();a.trackPageView();assert.equal(events().filter(x=>x[1]==='page_view').length,2,'One view per changed page');
  a.trackContactClick({target:{closest:()=>({getAttribute:()=> 'https://wa.me/60132744150?text=PRIVATE_MESSAGE'})}});
- assert.equal(events().at(-1)[1],'whatsapp_click');assert.ok(!('link_url' in events().at(-1)[2]));
+ assert.equal(events().at(-1)[1],'whatsapp_click');assert.equal(events().at(-1)[2].link_url,'https://wa.me/60132744150');
+ for(const href of ['https://api.whatsapp.com/send?phone=60132744150&text=PRIVATE_MESSAGE','https://web.whatsapp.com/send?phone=60132744150&text=PRIVATE_MESSAGE']){
+  a.trackContactClick({target:{closest:()=>({getAttribute:()=>href})}});assert.equal(events().at(-1)[1],'whatsapp_click');assert.equal(events().at(-1)[2].link_url,'https://wa.me/60132744150');
+ }
  a.trackAnalyticsEvent('enquiry_preview','PRIVATE_NAME');assert.ok(!('service_id' in events().at(-1)[2]));
  assert.ok(!JSON.stringify(window.dataLayer).includes('PRIVATE_'),'No private query, referrer or message data in payloads');
  const before=events().length;a.setAnalyticsConsent('denied');a.trackAnalyticsEvent('phone_click');a.trackPageView();assert.equal(events().length,before,'Withdrawal stops application event collection');
