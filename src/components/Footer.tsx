@@ -2,6 +2,7 @@ import { PageType } from '../types';
 import {pagePath,servicePath} from '../seo';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_CONTACT, SERVICES_DATA } from '../data/tasblockData';
+import GoogleAnalytics from './GoogleAnalytics';
 
 interface FooterProps { onNavigate: (page: PageType) => void; }
 const linkStyle = 'min-h-11 inline-flex items-center text-left rounded-md hover:text-[#99D5D9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#99D5D9]';
@@ -76,6 +77,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <p><strong className="text-white">Pengeluar dan Builder mempunyai peranan berbeza.</strong> Tasblock (M) Sdn. Bhd. ialah syarikat keluarga yang membangunkan dan mengilang teknologi Tasblock. Tasblock Builder ialah inisiatif berasingan untuk kontraktor tempatan, pelanggan individu dan projek berskala kecil. Rekod projek dan kelayakan pengeluar bukan secara automatik rekod atau kelayakan Builder.</p>
         </div>
         <p className="border-t border-slate-800 mt-8 pt-6 text-sm text-slate-400">&copy; {new Date().getFullYear()} Tasblock Builder. Hak cipta terpelihara.</p>
+        <GoogleAnalytics/>
       </div>
     </footer>
   );

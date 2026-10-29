@@ -10,3 +10,4 @@ coverage/
 # Local video masters; published videos are served by Cloudinary.
 media/
 .seo-build/
+.analytics-check/

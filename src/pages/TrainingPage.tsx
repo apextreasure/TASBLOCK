@@ -2,6 +2,7 @@
 import { useState, type FormEvent } from 'react';
 import { PageType } from '../types';
 import { TRAINING_COURSES, COMPANY_CONTACT } from '../data/tasblockData';
+import {trackAnalyticsEvent} from '../analytics';
 import { GraduationCap, ArrowRight, Check, MessageCircle } from 'lucide-react';
 
 export default function TrainingPage({ onNavigate }: { onNavigate: (page: PageType) => void }) {
@@ -15,6 +16,7 @@ export default function TrainingPage({ onNavigate }: { onNavigate: (page: PageTy
   function prepareMessage(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!name.trim() || !location.trim()) return;
+    trackAnalyticsEvent('training_interest_preview','training');
     setMessage(`Salam Tasblock Builder, saya ingin mendaftar minat latihan sistem Tasblock.\nNama: ${name.trim()}\nOrganisasi: ${organisation.trim() || 'Individu'}\nLokasi: ${location.trim()}\nLatar belakang: ${background}\nMohon maklumat kandungan, jadual, lokasi dan aturan latihan apabila disahkan. Saya memahami ini bukan tempahan tempat.`);
   }
   const fieldClass = 'w-full px-4 py-3 rounded-xl bg-slate-950/70 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-[#3EABB0]';

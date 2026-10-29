@@ -1,6 +1,7 @@
 import { useEffect, useId, useState } from 'react';
 import type { FormEvent } from 'react';
 import { COMPANY_CONTACT, SERVICES_DATA } from '../data/tasblockData';
+import {trackAnalyticsEvent} from '../analytics';
 
 function serviceFromUrl() {
   if (typeof window === 'undefined') return '';
@@ -38,6 +39,7 @@ export default function ProjectEnquiry() {
     setErrors(next);
     setPreview('');
     if (Object.keys(next).length) { document.getElementById(`${id}-${Object.keys(next)[0]}`)?.focus(); return; }
+    trackAnalyticsEvent('enquiry_preview',selected!.id);
     setPreview(['Salam Tasblock Builder, saya ingin membincangkan keperluan projek saya.', '',
       ...(fields.name.trim() ? [`Nama: ${fields.name.trim()}`] : []),
       `Lokasi projek: ${fields.location.trim()}`, `Perkhidmatan: ${selected!.title}`,

@@ -1,0 +1,15 @@
+{
+  "status": "prepared_inactive_until_owner_supplies_G_ID",
+  "configuration": "VITE_GA4_MEASUREMENT_ID at build time, or ga4MeasurementId in src/data/analyticsConfig.ts",
+  "stream_settings_required": {"enhanced_measurement": "OFF: manual page views and contact events are provided; automatic outbound-link collection could include WhatsApp draft text"},
+  "consent": "Google tag loads only after analytics consent. Footer settings allow withdrawal.",
+  "events": {
+    "page_view": "Once per pathname transition after document metadata update; query/hash excluded except allow-listed campaign parameters",
+    "whatsapp_click": "Contact-link click; no WhatsApp URL/message body is sent by custom tracking",
+    "phone_click": "Telephone-link click",
+    "enquiry_preview": "Valid enquiry draft preview; optional allow-listed service_id only",
+    "training_interest_preview": "Training-interest draft preview; no name/organisation/location fields"
+  },
+  "limits": "Clicks/previews are not confirmed messages, calls or sales. Google account ownership, stream configuration and delivery verification require the owner and a real Measurement ID.",
+  "test": "node scripts/test-analytics.mjs"
+}
