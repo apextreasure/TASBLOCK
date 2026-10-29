@@ -135,7 +135,7 @@ export const FAQ_DATA: FaqItem[] = [
 
 export const COMPANY_CONTACT = {
   name: 'Tasblock Builder', tagline: 'Teknologi komposit Tasblock untuk kontraktor tempatan & projek individu',
-  phoneDisplay: '+60 13-274 4018', phoneRaw: '60132744018',
+  phoneDisplay: '+60 13-274 4150', phoneRaw: '60132744150',
   email: '', address: 'No.22A, Jalan Kesidang 1, 48000 Rawang, Selangor, Malaysia', operatingHours: '',
-  whatsappBaseUrl: 'https://wa.me/60132744018', coverageAreas: 'Pertanyaan projek seluruh Malaysia; pertanyaan eksport komponen antarabangsa'
+  whatsappBaseUrl: 'https://wa.me/60132744150', coverageAreas: 'Pertanyaan projek seluruh Malaysia; pertanyaan eksport komponen antarabangsa'
 };
